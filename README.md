@@ -27,6 +27,10 @@ NimScript embedded on Python
 
 Everything if you pass **all** the standard library folder full paths.
 
+- How ?, Why ?.
+
+https://www.youtube.com/watch?v=BdQkU_HepIg
+
 
 ## Troubleshooting
 
