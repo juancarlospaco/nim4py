@@ -20,8 +20,8 @@ $ echo 'echo "NimScript embedded on Python!"' > file.nims
 
 $ python
 Python 3.8.3 (default, May 17 2020, 18:15:42) [GCC 10.1.0] on linux
->>> import nimscript4python
->>> nimscript4python.nimscript("file.nims", ["/home/juan/.choosenim/toolchains/nim-1.2.2/lib/"])
+>>> from nimscript4python import nimscript
+>>> nimscript("file.nims", ["/home/juan/.choosenim/toolchains/nim-1.2.2/lib/"])
 NimScript embedded on Python
 
 ```
