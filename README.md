@@ -38,4 +38,5 @@ https://www.youtube.com/watch?v=BdQkU_HepIg
 
 Sometimes requires changing `~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim`,
 near line 145, change from `os.paramStr()` to `""` and from `os.paramCount()` to `0`,
+the compiler will complain with the line number and column anyways,
 then it compiles as of Nim 1.2.2+. Python toolchain fails to compile correctly.
