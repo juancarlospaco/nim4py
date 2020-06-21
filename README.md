@@ -3,20 +3,19 @@
 - [NimScript](https://nim-lang.github.io/Nim/nims.html) Interoperability for Python.
 
 
-# Troubleshooting
+```console
+$ nim c -d:release --app:lib --out:nimscript5python.so nimscript5python.nim
+Hint: 9310 LOC; 20 sec; 300MiB peakmem; Dangerous build; proj: nimscript4python.nim; out: nimscript4python.so [SuccessX]
 
-`ImportError: dynamic module does not define module export function` OR `Segmentation fault` ?.
+$ file nimscript4python.so
+nimscript4python.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, not stripped
 
-- Rename the compiled output file to `nimscript4python.so` on Linux and Mac, or `nimscript4python.pyd` on Windows,
-  this is a Bug on Pythons `setuptools.Extension`, it renames the output file to random crap, not my bug.
+$ echo 'echo "NimScript embedded on Python!"' > file.nims
 
-**Example:**
+$ python
+Python 3.8.3 (default, May 17 2020, 18:15:42) [GCC 10.1.0] on linux
+>>> import nimscript4python
+>>> nimscript4python.nimscript("file.nims", ["/home/juan/.choosenim/toolchains/nim-1.2.2/lib/"])
+NimScript embebed on Python
 
-If it install with the filename
-`/usr/lib/python3.8/site-packages/nimscript4python.cpython-3.8.1-x86_64-linux-gnu.so`,
-rename it to
-`/usr/lib/python3.8/site-packages/nimscript4python.so`,
-If it still wont work, uninstall it, and compile it again but with the filename
-`nimscript4python.so` on Linux and Mac, or `nimscript4python.pyd` on Windows, not my bug.
-
-The solution is that it *must* be compiled with the filename `nimscript4python`.
+```
