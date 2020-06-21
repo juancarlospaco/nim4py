@@ -16,7 +16,7 @@ Hint: 9310 LOC; 20 sec; 300MiB peakmem; Dangerous build; proj: nimscript4python.
 $ file nimscript4python.so
 nimscript4python.so: ELF 64-bit LSB shared object, x86-64, not stripped
 
-$ echo 'echo "NimScript embedded on Python!"' > file.nims
+$ echo 'echo "NimScript embedded on Python"' > file.nims
 
 $ python
 Python 3.8.3 (default, May 17 2020, 18:15:42) [GCC 10.1.0] on linux
