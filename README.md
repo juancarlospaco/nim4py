@@ -49,3 +49,7 @@ Use full path to the stdlib folder, it wont expand stuff like `~`, etc.
 Should be possible to install via Python PIP,
 but I dont know how to patch the file that needs to be patched from PIP (and restore it),
 so for now it requires compiling with `nim` compiler. Pull Request welcome.
+
+- Whats NimScript ?.
+
+https://nim-lang.github.io/Nim/nims.html
