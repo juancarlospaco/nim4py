@@ -40,3 +40,7 @@ https://www.youtube.com/watch?v=BdQkU_HepIg
 - Fails to find the NimScript file ?.
 
 Use full path to the `.nims` file, it wont expand stuff like `~`, etc.
+
+- Fails to find the stdlib folder ?.
+
+Use full path to the stdlib folder, it wont expand stuff like `~`, etc.
