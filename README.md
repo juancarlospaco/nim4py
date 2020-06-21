@@ -32,6 +32,13 @@ NimScript embedded on Python
 
 ## FAQ
 
+- Why ?.
+
+It can be useful for some cool ideas, on Nim you do not have GIL, Garbage Collector, Virtual Machine, etc
+but adds code execution at compile-time, powerful metaprogramming, you can "import" C/C++/JS Code and more,
+maybe for plugins for a Python project or embedded scripting or similar ideas,
+with option to compile to machine code binary or run in the browser or WebAssembly.
+
 - What works of NimScript inside Python ?.
 
 Everything if you pass **all** the standard library folder paths (?).
@@ -53,8 +60,3 @@ so for now it requires compiling with `nim` compiler. Pull Request welcome.
 - Whats NimScript ?.
 
 https://nim-lang.github.io/Nim/nims.html
-
-It can be useful for some cool ideas, on Nim you do not have GIL, Garbage Collector, Virtual Machine, etc
-but adds code execution at compile-time, powerful metaprogramming, easy C/C++/JS FFI y and more,
-maybe for plugins for a Python project or embedded scripting or similar ideas,
-with option to compile to machine code binary or run in the browser.
