@@ -36,10 +36,6 @@ NimScript embedded on Python
 
 Everything if you pass **all** the standard library folder full paths (?).
 
-- How ?, Why ?.
-
-https://www.youtube.com/watch?v=BdQkU_HepIg
-
 - Fails to find the NimScript file ?.
 
 Use full path to the `.nims` file, it wont expand stuff like `~`, etc.
