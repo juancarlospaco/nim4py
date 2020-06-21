@@ -27,7 +27,7 @@ NimScript embedded on Python
 ```
 
 
-[![](temp.png)](https://www.youtube.com/watch?v=BdQkU_HepIg)
+[![](https://raw.githubusercontent.com/juancarlospaco/nimscript4python/master/temp.png)](https://www.youtube.com/watch?v=BdQkU_HepIg)
 
 
 ## FAQ
