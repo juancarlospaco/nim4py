@@ -16,6 +16,22 @@ $ python
 Python 3.8.3 (default, May 17 2020, 18:15:42) [GCC 10.1.0] on linux
 >>> import nimscript4python
 >>> nimscript4python.nimscript("file.nims", ["/home/juan/.choosenim/toolchains/nim-1.2.2/lib/"])
-NimScript embebed on Python
+NimScript embedded on Python
 
 ```
+
+
+## FAQ
+
+- What works of NimScript inside Python ?.
+
+Everything if you pass **all** the standard library folder full paths.
+
+
+## Troubleshooting
+
+- Wont compile?.
+
+Sometimes requires changing `~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim`,
+near line 145, change from `os.paramStr()` to `""` and from `os.paramCount()` to `0`,
+then it compiles as of Nim 1.2.2+. Python toolchain fails to compile correctly.
