@@ -4,6 +4,12 @@
 
 
 ```console
+$ choosenim 1.2.2
+Switched to Nim 1.2.2
+
+$ cp --verbose patches/scriptconfig.nim ~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim
+'patches/scriptconfig.nim' -> '/home/juan/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim'
+
 $ nim c -d:release --app:lib --out:nimscript5python.so nimscript5python.nim
 Hint: 9310 LOC; 20 sec; 300MiB peakmem; Dangerous build; proj: nimscript4python.nim; out: nimscript4python.so [SuccessX]
 
@@ -30,13 +36,3 @@ Everything if you pass **all** the standard library folder full paths (?).
 - How ?, Why ?.
 
 https://www.youtube.com/watch?v=BdQkU_HepIg
-
-
-## Troubleshooting
-
-- Wont compile?.
-
-Sometimes requires changing `~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim`,
-near line 145, change from `os.paramStr()` to `""` and from `os.paramCount()` to `0`,
-the compiler will complain with the line number and column anyways,
-then it compiles as of Nim 1.2.2+. Python toolchain fails to compile correctly.
