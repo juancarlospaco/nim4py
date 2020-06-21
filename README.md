@@ -25,7 +25,7 @@ NimScript embedded on Python
 
 - What works of NimScript inside Python ?.
 
-Everything if you pass **all** the standard library folder full paths.
+Everything if you pass **all** the standard library folder full paths (?).
 
 - How ?, Why ?.
 
