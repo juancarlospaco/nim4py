@@ -27,6 +27,9 @@ NimScript embedded on Python
 ```
 
 
+[![](temp.png)](https://www.youtube.com/watch?v=BdQkU_HepIg)
+
+
 ## FAQ
 
 - What works of NimScript inside Python ?.
