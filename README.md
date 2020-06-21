@@ -7,7 +7,7 @@
 $ choosenim 1.2.2
 Switched to Nim 1.2.2
 
-$ cp --verbose patches/scriptconfig.nim ~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim
+$ cp --verbose patches/scriptconfig.nim ~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim  # Patched os.paramCount() to 0 and os.paramStr() to ""
 'patches/scriptconfig.nim' -> '/home/juan/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim'
 
 $ nim c -d:release --app:lib --out:nimscript5python.so nimscript5python.nim
