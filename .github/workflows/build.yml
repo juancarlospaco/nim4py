@@ -104,14 +104,14 @@ jobs:
     - name: Compile Debug & import (Unix)  # Compile and import to check if its working
       if: runner.os == 'Linux' || runner.os == 'macOS'
       run: |
-        nim c --app:lib --out:$PACKAGE_NAME.so $MAIN_MODULE
+        nim c --app:lib --path:$PWD/Nim --out:$PACKAGE_NAME.so $MAIN_MODULE
         python3 -c "import $PACKAGE_NAME"
 
 
     - name: Compile Debug & import (Windows) # Compile and import to check if its working
       if: runner.os == 'Windows'
       run: |
-        nim c --app:lib --out:${{ env.PACKAGE_NAME }}.pyd ${{ env.MAIN_MODULE }}
+        nim c --app:lib --path:${{ env.PWD/Nim }} --out:${{ env.PACKAGE_NAME }}.pyd ${{ env.MAIN_MODULE }}
         python.exe -c "import ${{ env.PACKAGE_NAME }}"
 
 
