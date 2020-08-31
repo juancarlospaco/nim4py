@@ -98,7 +98,7 @@ jobs:
 
     - name: Nim Check                   # Check code style and semantic.
       if: runner.os == 'Linux'
-      run: nim check --styleCheck:hint $MAIN_MODULE
+      run: nim check --styleCheck:hint --path:$PWD/Nim $MAIN_MODULE
 
 
     - name: Patch stdlib                # Patch
