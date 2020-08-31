@@ -84,7 +84,7 @@ jobs:
 
     - name: Delay                       # Linux must finish last.
       if: runner.os == 'Linux'
-      run: sleep 5m
+      run: sleep 8m
 
 
     - name: SemVer                      # Use Git Hash as versioning.
@@ -161,6 +161,7 @@ jobs:
 
 
     - uses: EndBug/add-and-commit@v4  # Commit everything to Git repo
+      if: runner.os == 'Linux'
       with:
         add: 'dist'
         force: true
