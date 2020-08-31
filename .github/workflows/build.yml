@@ -101,6 +101,11 @@ jobs:
       run: nim check --styleCheck:hint $MAIN_MODULE
 
 
+    - name: Patch stdlib                # Patch
+      if: runner.os == 'Linux' || runner.os == 'macOS'
+      run: cp --force patches/scriptconfig.nim Nim/compiler/scriptconfig.nim
+
+
     - name: Compile Debug & import (Unix)  # Compile and import to check if its working
       if: runner.os == 'Linux' || runner.os == 'macOS'
       run: |
