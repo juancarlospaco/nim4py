@@ -102,7 +102,7 @@ jobs:
 
 
     - name: Patch stdlib                # Patch
-      if: runner.os == 'Linux' || runner.os == 'macOS'
+      if: runner.os == 'Linux'
       run: cp --force patches/scriptconfig.nim Nim/compiler/scriptconfig.nim
 
 
