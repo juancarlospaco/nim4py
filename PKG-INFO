@@ -1,5 +1,5 @@
 Metadata-Version: 2.1
-Name: nimscript4python
+Name: nim4python
 Summary: NimScript interoperability for Python
 Home-page: https://github.com/juancarlospaco/nimscript4python
 Author: Juan Carlos
@@ -40,4 +40,4 @@ Classifier: Programming Language :: Python :: Implementation :: CPython
 Classifier: Topic :: Software Development
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
-Version: 
+Version:
