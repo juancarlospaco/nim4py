@@ -69,7 +69,7 @@ jobs:
 
     - name: Prepare Folders             # Prepare folders for the Python package
       if: runner.os == 'Linux'
-      run: mkdir -p dist/lin dist/win dist/mac dist/lib dist/$PACKAGE_NAME.egg-info
+      run: mkdir -p dist/lin dist/win dist/mac dist/$PACKAGE_NAME.egg-info
 
 
     - name: Prepare Files               # Prepare files for the Python package
@@ -152,9 +152,9 @@ jobs:
       run: rm --force dist/lin/*.json dist/win/*.json dist/mac/*.json
 
 
-    - name: Copy the stdlib # Clean out
-      if: runner.os == 'Linux'
-      run: cp --verbose --recursive --force src/lib/*.* dist/lib/
+    # - name: Copy the stdlib # Clean out
+    #   if: runner.os == 'Linux'
+    #   run: cp --verbose --recursive --force src/lib/*.* dist/lib/
 
 
     - name: Compress to ZIP  # Make Python package
