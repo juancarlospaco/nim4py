@@ -6,7 +6,6 @@
 /* section: NIM_merge_HEADERS */
 
 #include "nimbase.h"
-#include <string.h>
 #undef LANGUAGE_C
 #undef MIPSEB
 #undef MIPSEL
@@ -26,16 +25,15 @@
 #define nimln_(x, y)
 
 /* section: NIM_merge_FORWARD_TYPES */
-typedef struct NimStringDesc NimStringDesc;
-typedef struct TGenericSeq TGenericSeq;
-typedef struct TNimType TNimType;
-typedef struct TNimNode TNimNode;
-typedef struct tyTuple__UV3llMMYFckfui8YMBuUZA tyTuple__UV3llMMYFckfui8YMBuUZA;
-typedef struct tySequence__sM4lkSb7zS6F7OVMvW9cffQ tySequence__sM4lkSb7zS6F7OVMvW9cffQ;
 typedef struct tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA;
 typedef struct tySequence__E2XyP5e7Jr9aMpJMjdz5Tkg tySequence__E2XyP5e7Jr9aMpJMjdz5Tkg;
 typedef struct tySequence__1Ib9a4sxiw4YCYbDTADLEsg tySequence__1Ib9a4sxiw4YCYbDTADLEsg;
 typedef struct tySequence__xxWWYOndkW9adiM61bZkvsg tySequence__xxWWYOndkW9adiM61bZkvsg;
+typedef struct TNimType TNimType;
+typedef struct TNimNode TNimNode;
+typedef struct NimStringDesc NimStringDesc;
+typedef struct TGenericSeq TGenericSeq;
+typedef struct tySequence__sM4lkSb7zS6F7OVMvW9cffQ tySequence__sM4lkSb7zS6F7OVMvW9cffQ;
 typedef struct tyObject_PyObjectObj__aD5pkFWInXrZXinZ42cDEg tyObject_PyObjectObj__aD5pkFWInXrZXinZ42cDEg;
 typedef struct tyObject_PyLibcolonObjectType___bTw708kK89b8Vj9cmSu9a4zig tyObject_PyLibcolonObjectType___bTw708kK89b8Vj9cmSu9a4zig;
 typedef struct tyObject_PyTypeObject3Obj__cRsC9bGvH9bX6A9aVx8UB6I5g tyObject_PyTypeObject3Obj__cRsC9bGvH9bX6A9aVx8UB6I5g;
@@ -44,6 +42,7 @@ typedef struct tyObject_Complex__zWadV1X9aMO7qS9bsQFB0JFA tyObject_Complex__zWad
 typedef struct tyObject_PyMethodDef__9aWi1PsmvCuTKIYDHHnhfcw tyObject_PyMethodDef__9aWi1PsmvCuTKIYDHHnhfcw;
 typedef struct tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA;
 typedef struct tySequence__4eQHGndY6XBYpFOH09apV8Q tySequence__4eQHGndY6XBYpFOH09apV8Q;
+typedef struct tyTuple__UV3llMMYFckfui8YMBuUZA tyTuple__UV3llMMYFckfui8YMBuUZA;
 typedef struct tyObject_TLLStream__a5oZYQ9aTktYME2449ayEi6g tyObject_TLLStream__a5oZYQ9aTktYME2449ayEi6g;
 typedef struct Exception Exception;
 typedef struct RootObj RootObj;
@@ -55,13 +54,12 @@ typedef struct tyObject_StackTraceEntry__oLyohQ7O2XOvGnflOss8EA tyObject_StackTr
 typedef struct tyObject_PyMemberDef__WC29aEeHi2Pdy9c4AkllcBTg tyObject_PyMemberDef__WC29aEeHi2Pdy9c4AkllcBTg;
 
 /* section: NIM_merge_TYPES */
-struct TGenericSeq {
-NI len;
-NI reserved;
-};
-struct NimStringDesc {
-  TGenericSeq Sup;
-NIM_CHAR data[SEQ_DECL_SIZE];
+struct tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA {
+NCSTRING name;
+NCSTRING doc;
+tySequence__E2XyP5e7Jr9aMpJMjdz5Tkg* methods;
+tySequence__1Ib9a4sxiw4YCYbDTADLEsg* types;
+tySequence__xxWWYOndkW9adiM61bZkvsg* iterators;
 };
 typedef NU8 tyEnum_TNimKind__jIBKr1ejBgsfM33Kxw4j7A;
 typedef NU8 tySet_tyEnum_TNimTypeFlag__v8QUszD1sWlSIWZz7mC4bQ;
@@ -88,19 +86,16 @@ NI len;
 TNimNode** sons;
 };
 typedef N_NIMCALL_PTR(void, tyProc__T4eqaYlFJYZUv9aG9b1TV0bQ) (void);
-struct tyTuple__UV3llMMYFckfui8YMBuUZA {
-NimStringDesc* Field0;
-NimStringDesc* Field1;
+struct TGenericSeq {
+NI len;
+NI reserved;
 };
-struct tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA {
-NCSTRING name;
-NCSTRING doc;
-tySequence__E2XyP5e7Jr9aMpJMjdz5Tkg* methods;
-tySequence__1Ib9a4sxiw4YCYbDTADLEsg* types;
-tySequence__xxWWYOndkW9adiM61bZkvsg* iterators;
+struct NimStringDesc {
+  TGenericSeq Sup;
+NIM_CHAR data[SEQ_DECL_SIZE];
 };
 typedef N_CDECL_PTR(void*, tyProc__uQWqJp3WAx8fOY1h9aCwjIg) (void* s, void* a, void* k);
-typedef N_NIMCALL_PTR(void*, tyProc__iv6n7tcGawU401muvntJ9cA) (void* aX60gensym5_, void* kwgX60gensym5_);
+typedef N_NIMCALL_PTR(void*, tyProc__iv6n7tcGawU401muvntJ9cA) (void* aX60gensym4_, void* kwgX60gensym4_);
 typedef NCSTRING tyArray__jieoU9cfWs1Krn17l9aYsDyg[2];
 struct tyObject_PyObjectObj__aD5pkFWInXrZXinZ42cDEg {
 NI ob_refcnt;
@@ -237,6 +232,10 @@ void* PyExc_KeyError;
 void* NimPyException;
 };
 typedef NU8 tySet_tyEnum_TSandboxFlag__JyPEhkAmDAldmLHNNrLR0A;
+struct tyTuple__UV3llMMYFckfui8YMBuUZA {
+NimStringDesc* Field0;
+NimStringDesc* Field1;
+};
 struct RootObj {
 TNimType* m_type;
 };
@@ -316,28 +315,19 @@ struct tySequence__mAI4KvRAgoko9bmrV4QRgaQ {
 N_LIB_PRIVATE N_NIMCALL(void, nimGCvisit)(void* d, NI op);
 static N_NIMCALL(void, TM__bvyyApzoWMsTRz6tx00FGg_2)(void);
 N_LIB_PRIVATE N_NIMCALL(void, nimRegisterGlobalMarker)(tyProc__T4eqaYlFJYZUv9aG9b1TV0bQ markerProc);
-N_LIB_PRIVATE N_NIMCALL(void, nossplitPath)(NimStringDesc* path, tyTuple__UV3llMMYFckfui8YMBuUZA* Result);
-static N_INLINE(void, nimZeroMem)(void* p, NI size);
-static N_INLINE(void, nimSetMem__zxfKBYntu9cBapkhrCOk1fgmemory)(void* a, int v, NI size);
-static N_INLINE(NIM_BOOL*, nimErrorFlag)(void);
-N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, copyString)(NimStringDesc* src);
-static N_NIMCALL(void, TM__bvyyApzoWMsTRz6tx00FGg_4)(void);
-N_LIB_PRIVATE N_NIMCALL(void*, newSeq)(TNimType* typ, NI len);
-N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, slash___gEyhbzZ1UcxyenWRLJRXNQ)(NimStringDesc* head, NimStringDesc* tail);
-static N_NIMCALL(void, TM__bvyyApzoWMsTRz6tx00FGg_18)(void);
 N_LIB_PRIVATE N_NIMCALL(void, initPythonModuleDesc__0f1AKGy9a6FMRjtYbL5nSQg)(tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA* m, NCSTRING name, NCSTRING doc);
 N_LIB_EXPORT N_CDECL(void, initnim4py)(void);
 N_LIB_PRIVATE N_NIMCALL(void, initModule2__QOPr6RYgxP9c8n2lZVbiDwA)(tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA* m);
+static N_INLINE(NIM_BOOL*, nimErrorFlag)(void);
 N_LIB_EXPORT N_CDECL(void*, PyInit_nim4py)(void);
 N_LIB_PRIVATE N_NIMCALL(void*, initModule3__b5gVEAN0cbSksVFIpPmViA)(tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA* m);
 N_LIB_PRIVATE N_NIMCALL(void, registerExportedModule__2aw5dpL5lVZZ9cjH0apWcXA)(NimStringDesc* name, void* initAddr2, void* initAddr3);
 N_LIB_PRIVATE N_NIMCALL(void, addMethod__TpUnmhxGlZgxTBTLPiE3nw)(tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA* m, NCSTRING name, NCSTRING doc, tyProc__uQWqJp3WAx8fOY1h9aCwjIg f);
-N_LIB_PRIVATE N_CDECL(void*, nimscriptPy_wrapper__9cipsVivQQltoMxeF52zNvw)(void* selfX60gensym5_, void* args, void* kwargs);
+N_LIB_PRIVATE N_CDECL(void*, nimscriptPy_wrapper__FcpPuG7IfD4gSAZnoKl4ZQ)(void* selfX60gensym4_, void* args, void* kwargs);
 static N_INLINE(void, updateStackBottom__FRn3WNsRdbdvfuL6O7x1BQnimpy)(void);
 N_LIB_PRIVATE N_NOINLINE(void, nimGC_setStackBottom)(void* theStackBottom);
 N_LIB_PRIVATE N_NIMCALL(void*, noinline__N80vx60ClNyGM4nya6MU8g)(void* args, void* kwargs);
 N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, verifyArgs__8sVYJT4zfbIXMNXtJ2cTng)(void* argTuple, void* kwargsDict, NI argsLen, NI argsLenReq, NCSTRING* argNames, NI argNamesLen_0, NimStringDesc* funcName);
-N_LIB_PRIVATE N_NIMCALL(void, genericSeqAssign)(void* dest, void* src, TNimType* mt);
 N_LIB_PRIVATE N_NIMCALL(void, parseArg__icg9aGIbXA4DEIGHwq7rmAA)(void* argTuple, void* kwargsDict, NI argIdx, NCSTRING argName, NimStringDesc** result);
 N_LIB_PRIVATE N_NIMCALL(void, parseArg__9b6ttEhK1WRqorza3JVW9cJw)(void* argTuple, void* kwargsDict, NI argIdx, NCSTRING argName, tySequence__sM4lkSb7zS6F7OVMvW9cffQ** result);
 static N_INLINE(void*, nimValueToPy__6Tvzvi9bEckxJJClCQCOiEAnimpy)(void);
@@ -411,43 +401,25 @@ N_LIB_PRIVATE N_NIMCALL(void, nimpy_nimpyDatInit000)(void);
 N_LIB_PRIVATE N_NIMCALL(void, NimMainModule)(void);
 
 /* section: NIM_merge_DATA */
-extern TNimType NTI__77mFvmsOLKik79ci2hXkHEg_;
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_3, "/home/runner/work/nim4py/nim4py/src/nim4py.nim", 46);
-extern TNimType NTI__sM4lkSb7zS6F7OVMvW9cffQ_;
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_5, "lib", 3);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_6, "arch", 4);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_7, "core", 4);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_8, "deprecated", 10);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_9, "experimental", 12);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_10, "impure", 6);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_11, "packages", 8);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_12, "posix", 5);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_13, "pure", 4);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_14, "std", 3);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_15, "system", 6);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_16, "windows", 7);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_17, "wrappers", 8);
 extern TNimType NTI__gBC8z6Ez5xj3dXoP0ylCRA_;
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_19, "nim4py", 6);
-static NIM_CONST tyArray__jieoU9cfWs1Krn17l9aYsDyg TM__bvyyApzoWMsTRz6tx00FGg_20 = {"script",
+STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_3, "nim4py", 6);
+static NIM_CONST tyArray__jieoU9cfWs1Krn17l9aYsDyg TM__bvyyApzoWMsTRz6tx00FGg_4 = {"script",
 "stdlib"}
 ;
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_21, "nimscript", 9);
-STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_23, "true", 4);
+STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_5, "nimscript", 9);
+STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_7, "true", 4);
 static NIM_CONST struct {
   TGenericSeq Sup;
   tyTuple__UV3llMMYFckfui8YMBuUZA data[1];
-} TM__bvyyApzoWMsTRz6tx00FGg_24 = {{1, 1 | NIM_STRLIT_FLAG}, {{((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_21),
-((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_23)}
+} TM__bvyyApzoWMsTRz6tx00FGg_8 = {{1, 1 | NIM_STRLIT_FLAG}, {{((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5),
+((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_7)}
 }};
-static NIM_CONST tySequence__4eQHGndY6XBYpFOH09apV8Q* TM__bvyyApzoWMsTRz6tx00FGg_22 = ((tySequence__4eQHGndY6XBYpFOH09apV8Q*)&TM__bvyyApzoWMsTRz6tx00FGg_24);
+static NIM_CONST tySequence__4eQHGndY6XBYpFOH09apV8Q* TM__bvyyApzoWMsTRz6tx00FGg_6 = ((tySequence__4eQHGndY6XBYpFOH09apV8Q*)&TM__bvyyApzoWMsTRz6tx00FGg_8);
 extern TNimType NTI__XEycrCsme5C8CVWAYEcdBQ_;
 
 /* section: NIM_merge_VARS */
-N_LIB_PRIVATE NimStringDesc* folder__9agkzsOJLQ9by9a1Si63rIGRw;
-extern NIM_BOOL nimInErrorMode__759bT87luu8XGcbkw13FUjA;
-N_LIB_PRIVATE tySequence__sM4lkSb7zS6F7OVMvW9cffQ* stdlib__JPswUt09bffoeArF9cXUAF9ag;
 N_LIB_PRIVATE tyObject_PyModuleDesc__gBC8z6Ez5xj3dXoP0ylCRA gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w;
+extern NIM_BOOL nimInErrorMode__759bT87luu8XGcbkw13FUjA;
 extern NU pyObjectStartOffset__g20dGCi2MffsHqmxIpqX7Q;
 extern tyObject_PyLibcolonObjectType___bTw708kK89b8Vj9cmSu9a4zig* pyLib__nxKBiAukGMNwnUq9bpn9adyw;
 extern Exception* currException__9bVPeDJlYTi9bQApZpfH8wjg;
@@ -457,33 +429,15 @@ extern Exception* currException__9bVPeDJlYTi9bQApZpfH8wjg;
 
 /* section: NIM_merge_PROCS */
 static N_NIMCALL(void, TM__bvyyApzoWMsTRz6tx00FGg_2)(void) {
-	nimGCvisit((void*)folder__9agkzsOJLQ9by9a1Si63rIGRw, 0);
-}
-static N_INLINE(void, nimSetMem__zxfKBYntu9cBapkhrCOk1fgmemory)(void* a, int v, NI size) {
-	void* T1_;
-	T1_ = (void*)0;
-	T1_ = memset(a, v, ((size_t) (size)));
+	nimGCvisit((void*)gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w.methods, 0);
+	nimGCvisit((void*)gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w.types, 0);
+	nimGCvisit((void*)gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w.iterators, 0);
 }
 static N_INLINE(NIM_BOOL*, nimErrorFlag)(void) {
 	NIM_BOOL* result;
 	result = (NIM_BOOL*)0;
 	result = (&nimInErrorMode__759bT87luu8XGcbkw13FUjA);
 	return result;
-}
-static N_INLINE(void, nimZeroMem)(void* p, NI size) {
-NIM_BOOL* nimErr_;
-{nimErr_ = nimErrorFlag();
-	nimSetMem__zxfKBYntu9cBapkhrCOk1fgmemory(p, ((int) 0), size);
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	}BeforeRet_: ;
-}
-static N_NIMCALL(void, TM__bvyyApzoWMsTRz6tx00FGg_4)(void) {
-	nimGCvisit((void*)stdlib__JPswUt09bffoeArF9cXUAF9ag, 0);
-}
-static N_NIMCALL(void, TM__bvyyApzoWMsTRz6tx00FGg_18)(void) {
-	nimGCvisit((void*)gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w.methods, 0);
-	nimGCvisit((void*)gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w.types, 0);
-	nimGCvisit((void*)gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w.iterators, 0);
 }
 N_LIB_EXPORT N_CDECL(void, initnim4py)(void) {
 NIM_BOOL* nimErr_;
@@ -548,7 +502,7 @@ N_LIB_PRIVATE N_NIMCALL(void, nimscript__ikFi1e2HPvfe2o39aHsWPsg)(NimStringDesc*
 	tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA* interpreter;
 NIM_BOOL* nimErr_;
 {nimErr_ = nimErrorFlag();
-	interpreter = createInterpreter__Vm5i60HMRDNohAhV79cksfg(script, stdlib->data, (stdlib ? stdlib->Sup.len : 0), 0, TM__bvyyApzoWMsTRz6tx00FGg_22, NIM_TRUE);
+	interpreter = createInterpreter__Vm5i60HMRDNohAhV79cksfg(script, stdlib->data, (stdlib ? stdlib->Sup.len : 0), 0, TM__bvyyApzoWMsTRz6tx00FGg_6, NIM_TRUE);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	evalScript__4xNUzcz2JvcblqszY4dB2A(interpreter, NIM_NIL);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
@@ -582,7 +536,7 @@ NIM_BOOL* nimErr_;
 	{
 		NIM_BOOL T3_;
 		T3_ = (NIM_BOOL)0;
-		T3_ = verifyArgs__8sVYJT4zfbIXMNXtJ2cTng(args, kwargs, ((NI) 2), ((NI) 1), TM__bvyyApzoWMsTRz6tx00FGg_20, 2, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_21));
+		T3_ = verifyArgs__8sVYJT4zfbIXMNXtJ2cTng(args, kwargs, ((NI) 2), ((NI) 2), TM__bvyyApzoWMsTRz6tx00FGg_4, 2, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
 		if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 		if (!!(T3_)) goto LA4_;
 		result = ((void*) (NIM_NIL));
@@ -590,7 +544,7 @@ NIM_BOOL* nimErr_;
 	}
 	LA4_: ;
 	arg0script = (NimStringDesc*)0;
-	genericSeqAssign((&arg1stdlib), stdlib__JPswUt09bffoeArF9cXUAF9ag, (&NTI__sM4lkSb7zS6F7OVMvW9cffQ_));
+	arg1stdlib = (tySequence__sM4lkSb7zS6F7OVMvW9cffQ*)0;
 	parseArg__icg9aGIbXA4DEIGHwq7rmAA(args, kwargs, ((NI) 0), "script", (&arg0script));
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	parseArg__9b6ttEhK1WRqorza3JVW9cJw(args, kwargs, ((NI) 1), "stdlib", (&arg1stdlib));
@@ -604,12 +558,12 @@ NIM_BOOL* nimErr_;
 	if (NIM_UNLIKELY(*nimErr_)) {
 		LA6_:;
 		if (isObj(nimBorrowCurrentException()->Sup.m_type, (&NTI__XEycrCsme5C8CVWAYEcdBQ_))) {
-			Exception* eX60gensym5_;
+			Exception* eX60gensym4_;
 			void* T11_;
 			*nimErr_ = NIM_FALSE;
-			eX60gensym5_ = getCurrentException();
+			eX60gensym4_ = getCurrentException();
 			T11_ = (void*)0;
-			T11_ = pythonException__Zl8uxcjgHaQZB15tcqXlTA(eX60gensym5_);
+			T11_ = pythonException__Zl8uxcjgHaQZB15tcqXlTA(eX60gensym4_);
 			if (NIM_UNLIKELY(*nimErr_)) goto LA9_;
 			result = T11_;
 			popCurrentException();
@@ -620,16 +574,16 @@ NIM_BOOL* nimErr_;
 	}BeforeRet_: ;
 	return result;
 }
-N_LIB_PRIVATE N_CDECL(void*, nimscriptPy_wrapper__9cipsVivQQltoMxeF52zNvw)(void* selfX60gensym5_, void* args, void* kwargs) {
+N_LIB_PRIVATE N_CDECL(void*, nimscriptPy_wrapper__FcpPuG7IfD4gSAZnoKl4ZQ)(void* selfX60gensym4_, void* args, void* kwargs) {
 	void* result;
-	tyProc__iv6n7tcGawU401muvntJ9cA volatile pX60gensym5_;
+	tyProc__iv6n7tcGawU401muvntJ9cA volatile pX60gensym4_;
 NIM_BOOL* nimErr_;
 {nimErr_ = nimErrorFlag();
 	result = (void*)0;
 	updateStackBottom__FRn3WNsRdbdvfuL6O7x1BQnimpy();
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	pX60gensym5_ = noinline__N80vx60ClNyGM4nya6MU8g;
-	result = pX60gensym5_(args, kwargs);
+	pX60gensym4_ = noinline__N80vx60ClNyGM4nya6MU8g;
+	result = pX60gensym4_(args, kwargs);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	}BeforeRet_: ;
 	return result;
@@ -722,143 +676,18 @@ N_LIB_PRIVATE void NIM_POSIX_INIT NimMainInit(void) {
 
 N_LIB_PRIVATE N_NIMCALL(void, NimMainModule)(void) {
 {
-	tyTuple__UV3llMMYFckfui8YMBuUZA T1_;
-	NimStringDesc* T2_;
-	NimStringDesc* T3_;
-	NimStringDesc* T4_;
-	NimStringDesc* T5_;
-	NimStringDesc* T6_;
-	NimStringDesc* T7_;
-	NimStringDesc* T8_;
-	NimStringDesc* T9_;
-	NimStringDesc* T10_;
-	NimStringDesc* T11_;
-	NimStringDesc* T12_;
-	NimStringDesc* T13_;
-	NimStringDesc* T14_;
-	NimStringDesc* T15_;
-	NimStringDesc* T16_;
-	NimStringDesc* T17_;
-	NimStringDesc* T18_;
-	NimStringDesc* T19_;
-	NimStringDesc* T20_;
-	NimStringDesc* T21_;
-	NimStringDesc* T22_;
-	NimStringDesc* T23_;
-	NimStringDesc* T24_;
-	NimStringDesc* T25_;
-	NimStringDesc* T26_;
 NIM_BOOL* nimErr_;
 
 	nimRegisterGlobalMarker(TM__bvyyApzoWMsTRz6tx00FGg_2);
 
-
-	nimRegisterGlobalMarker(TM__bvyyApzoWMsTRz6tx00FGg_4);
-
 nimErr_ = nimErrorFlag();
-
-	nimRegisterGlobalMarker(TM__bvyyApzoWMsTRz6tx00FGg_18);
-
-	nimZeroMem((void*)(&T1_), sizeof(tyTuple__UV3llMMYFckfui8YMBuUZA));
-	nossplitPath(((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_3), (&T1_));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	folder__9agkzsOJLQ9by9a1Si63rIGRw = copyString(T1_.Field0);
-	stdlib__JPswUt09bffoeArF9cXUAF9ag = (tySequence__sM4lkSb7zS6F7OVMvW9cffQ*) newSeq((&NTI__sM4lkSb7zS6F7OVMvW9cffQ_), 13);
-	T2_ = (NimStringDesc*)0;
-	T2_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[0] = T2_;
-	T3_ = (NimStringDesc*)0;
-	T3_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T4_ = (NimStringDesc*)0;
-	T4_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T3_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_6));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[1] = T4_;
-	T5_ = (NimStringDesc*)0;
-	T5_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T6_ = (NimStringDesc*)0;
-	T6_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T5_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_7));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[2] = T6_;
-	T7_ = (NimStringDesc*)0;
-	T7_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T8_ = (NimStringDesc*)0;
-	T8_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T7_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_8));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[3] = T8_;
-	T9_ = (NimStringDesc*)0;
-	T9_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T10_ = (NimStringDesc*)0;
-	T10_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T9_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_9));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[4] = T10_;
-	T11_ = (NimStringDesc*)0;
-	T11_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T12_ = (NimStringDesc*)0;
-	T12_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T11_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_10));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[5] = T12_;
-	T13_ = (NimStringDesc*)0;
-	T13_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T14_ = (NimStringDesc*)0;
-	T14_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T13_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_11));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[6] = T14_;
-	T15_ = (NimStringDesc*)0;
-	T15_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T16_ = (NimStringDesc*)0;
-	T16_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T15_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_12));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[7] = T16_;
-	T17_ = (NimStringDesc*)0;
-	T17_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T18_ = (NimStringDesc*)0;
-	T18_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T17_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_13));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[8] = T18_;
-	T19_ = (NimStringDesc*)0;
-	T19_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T20_ = (NimStringDesc*)0;
-	T20_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T19_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_14));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[9] = T20_;
-	T21_ = (NimStringDesc*)0;
-	T21_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T22_ = (NimStringDesc*)0;
-	T22_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T21_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_15));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[10] = T22_;
-	T23_ = (NimStringDesc*)0;
-	T23_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T24_ = (NimStringDesc*)0;
-	T24_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T23_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_16));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[11] = T24_;
-	T25_ = (NimStringDesc*)0;
-	T25_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(folder__9agkzsOJLQ9by9a1Si63rIGRw, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_5));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	T26_ = (NimStringDesc*)0;
-	T26_ = slash___gEyhbzZ1UcxyenWRLJRXNQ(T25_, ((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_17));
-	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	stdlib__JPswUt09bffoeArF9cXUAF9ag->data[12] = T26_;
 	initPythonModuleDesc__0f1AKGy9a6FMRjtYbL5nSQg((&gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w), "nim4py", "");
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	registerExportedModule__2aw5dpL5lVZZ9cjH0apWcXA(((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_19), ((void*) (initnim4py)), ((void*) (PyInit_nim4py)));
+	registerExportedModule__2aw5dpL5lVZZ9cjH0apWcXA(((NimStringDesc*) &TM__bvyyApzoWMsTRz6tx00FGg_3), ((void*) (initnim4py)), ((void*) (PyInit_nim4py)));
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	addMethod__TpUnmhxGlZgxTBTLPiE3nw((&gPythonLocalModuleDesc__U8f9bnkhs9ak9ca9c8BBya7n3w), "nimscript", "NimScript Interpreter for Python, see https://nim-lang.github.i"
 "o/Nim/nims.html\012func nimscript(script: string; stdlib: openArray"
-"[string]; verbose: bool = false)", nimscriptPy_wrapper__9cipsVivQQltoMxeF52zNvw);
+"[string]; verbose: bool = false)", nimscriptPy_wrapper__FcpPuG7IfD4gSAZnoKl4ZQ);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	BeforeRet_: ;
 	nimTestErrorFlag();
