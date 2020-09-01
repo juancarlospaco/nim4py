@@ -3,19 +3,14 @@
 - [NimScript](https://nim-lang.github.io/Nim/nims.html) Interoperability for Python.
 
 
+# Install
+
+- `pip install nim4py`
+
+
+# Use
+
 ```console
-$ choosenim 1.2.2
-Switched to Nim 1.2.2
-
-$ cp --verbose patches/scriptconfig.nim ~/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim  # Patched os.paramCount() to 0 and os.paramStr() to ""
-'patches/scriptconfig.nim' -> '/home/juan/.nimble/pkgs/compiler-1.2.2/compiler/scriptconfig.nim'
-
-$ nim c -d:release --app:lib --out:nimscript5python.so nimscript5python.nim
-Hint: 9310 LOC; 20 sec; 300MiB peakmem; Dangerous build; proj: nimscript4python.nim; out: nimscript4python.so [SuccessX]
-
-$ file nimscript4python.so
-nimscript4python.so: ELF 64-bit LSB shared object, x86-64, not stripped
-
 $ echo 'echo "NimScript embedded on Python"' > file.nims
 
 $ python
@@ -28,6 +23,12 @@ NimScript embedded on Python
 
 
 [![](https://raw.githubusercontent.com/juancarlospaco/nimscript4python/master/temp.png)](https://www.youtube.com/watch?v=BdQkU_HepIg)
+
+
+# Requisites
+
+- [Nim](http://nim-lang.org),
+  [you can install it using choosenim_install](https://github.com/juancarlospaco/choosenim_install#choosenim-integration-for-python-pip).
 
 
 ## FAQ
