@@ -334,7 +334,7 @@ static N_INLINE(void*, nimValueToPy__6Tvzvi9bEckxJJClCQCOiEAnimpy)(void);
 static N_INLINE(void*, newPyNone__6Tvzvi9bEckxJJClCQCOiEA_2nimpy)(void);
 static N_INLINE(void, incRef__CnqcscfOCAX2jCHv3dRPDwpy_utils)(void* p);
 static N_INLINE(tyObject_PyObjectObj__aD5pkFWInXrZXinZ42cDEg*, to__4gaYCHYBaCTIs6wfSrqsEApy_lib)(void* p);
-N_LIB_PRIVATE N_NIMCALL(void, nimscript__ikFi1e2HPvfe2o39aHsWPsg)(NimStringDesc* script, tySequence__sM4lkSb7zS6F7OVMvW9cffQ* stdlib);
+N_LIB_PRIVATE N_NIMCALL(void, nimscript__qgujufj0gEfJl9a6yUKqB1w)(NimStringDesc* script, tySequence__sM4lkSb7zS6F7OVMvW9cffQ* nim_stdlib_paths);
 N_LIB_PRIVATE N_NIMCALL(tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA*, createInterpreter__Vm5i60HMRDNohAhV79cksfg)(NimStringDesc* scriptName, NimStringDesc** searchPaths, NI searchPathsLen_0, tySet_tyEnum_TSandboxFlag__JyPEhkAmDAldmLHNNrLR0A flags, tySequence__4eQHGndY6XBYpFOH09apV8Q* defines, NIM_BOOL registerOps);
 N_LIB_PRIVATE N_NIMCALL(void, evalScript__4xNUzcz2JvcblqszY4dB2A)(tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA* i, tyObject_TLLStream__a5oZYQ9aTktYME2449ayEi6g* scriptStream);
 N_LIB_PRIVATE N_NIMCALL(void, destroyInterpreter__7l8n82kSsf9aZx1TpDojCzQ)(tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA* i);
@@ -404,7 +404,7 @@ N_LIB_PRIVATE N_NIMCALL(void, NimMainModule)(void);
 extern TNimType NTI__gBC8z6Ez5xj3dXoP0ylCRA_;
 STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_3, "nim4py", 6);
 static NIM_CONST tyArray__jieoU9cfWs1Krn17l9aYsDyg TM__bvyyApzoWMsTRz6tx00FGg_4 = {"script",
-"stdlib"}
+"nim_stdlib_paths"}
 ;
 STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_5, "nimscript", 9);
 STRING_LITERAL(TM__bvyyApzoWMsTRz6tx00FGg_7, "true", 4);
@@ -498,11 +498,11 @@ NIM_BOOL* nimErr_;
 	}BeforeRet_: ;
 	return result;
 }
-N_LIB_PRIVATE N_NIMCALL(void, nimscript__ikFi1e2HPvfe2o39aHsWPsg)(NimStringDesc* script, tySequence__sM4lkSb7zS6F7OVMvW9cffQ* stdlib) {
+N_LIB_PRIVATE N_NIMCALL(void, nimscript__qgujufj0gEfJl9a6yUKqB1w)(NimStringDesc* script, tySequence__sM4lkSb7zS6F7OVMvW9cffQ* nim_stdlib_paths) {
 	tyObject_InterpretercolonObjectType___P52MELrsYCwBeooqRNfjVA* interpreter;
 NIM_BOOL* nimErr_;
 {nimErr_ = nimErrorFlag();
-	interpreter = createInterpreter__Vm5i60HMRDNohAhV79cksfg(script, stdlib->data, (stdlib ? stdlib->Sup.len : 0), 0, TM__bvyyApzoWMsTRz6tx00FGg_6, NIM_TRUE);
+	interpreter = createInterpreter__Vm5i60HMRDNohAhV79cksfg(script, nim_stdlib_paths->data, (nim_stdlib_paths ? nim_stdlib_paths->Sup.len : 0), 0, TM__bvyyApzoWMsTRz6tx00FGg_6, NIM_TRUE);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	evalScript__4xNUzcz2JvcblqszY4dB2A(interpreter, NIM_NIL);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
@@ -528,7 +528,7 @@ static N_INLINE(void, popCurrentException)(void) {
 N_LIB_PRIVATE N_NIMCALL(void*, noinline__N80vx60ClNyGM4nya6MU8g)(void* args, void* kwargs) {
 	void* result;
 	NimStringDesc* arg0script;
-	tySequence__sM4lkSb7zS6F7OVMvW9cffQ* arg1stdlib;
+	tySequence__sM4lkSb7zS6F7OVMvW9cffQ* arg1nim_stdlib_paths;
 	void* T7_;
 NIM_BOOL* nimErr_;
 {nimErr_ = nimErrorFlag();
@@ -544,12 +544,12 @@ NIM_BOOL* nimErr_;
 	}
 	LA4_: ;
 	arg0script = (NimStringDesc*)0;
-	arg1stdlib = (tySequence__sM4lkSb7zS6F7OVMvW9cffQ*)0;
+	arg1nim_stdlib_paths = (tySequence__sM4lkSb7zS6F7OVMvW9cffQ*)0;
 	parseArg__icg9aGIbXA4DEIGHwq7rmAA(args, kwargs, ((NI) 0), "script", (&arg0script));
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	parseArg__9b6ttEhK1WRqorza3JVW9cJw(args, kwargs, ((NI) 1), "stdlib", (&arg1stdlib));
+	parseArg__9b6ttEhK1WRqorza3JVW9cJw(args, kwargs, ((NI) 1), "nim_stdlib_paths", (&arg1nim_stdlib_paths));
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	nimscript__ikFi1e2HPvfe2o39aHsWPsg(arg0script, arg1stdlib);
+	nimscript__qgujufj0gEfJl9a6yUKqB1w(arg0script, arg1nim_stdlib_paths);
 	if (NIM_UNLIKELY(*nimErr_)) goto LA6_;
 	T7_ = (void*)0;
 	T7_ = nimValueToPy__6Tvzvi9bEckxJJClCQCOiEAnimpy();
