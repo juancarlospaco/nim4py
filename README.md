@@ -1,4 +1,4 @@
-# NimScript4Python
+# Nim4Python
 
 - [NimScript](https://nim-lang.github.io/Nim/nims.html) Interoperability for Python.
 

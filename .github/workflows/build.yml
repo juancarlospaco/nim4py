@@ -84,7 +84,7 @@ jobs:
 
     - name: Delay                       # Linux must finish last.
       if: runner.os == 'Linux'
-      run: sleep 8m
+      run: sleep 6m
 
 
     - name: SemVer                      # Use Git Hash as versioning.
@@ -150,6 +150,11 @@ jobs:
     - name: Clean out (Linux) # Clean out
       if: runner.os == 'Linux'
       run: rm --force dist/lin/*.json dist/win/*.json dist/mac/*.json
+
+
+    - name: Copy the stdlib # Clean out
+      if: runner.os == 'Linux'
+      run: cp --verbose --recursive --force src/lib/*.* dist/lib/
 
 
     - name: Compress to ZIP  # Make Python package
