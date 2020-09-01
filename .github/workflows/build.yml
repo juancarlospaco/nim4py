@@ -69,7 +69,7 @@ jobs:
 
     - name: Prepare Folders             # Prepare folders for the Python package
       if: runner.os == 'Linux'
-      run: mkdir -p dist/lin dist/win dist/mac dist/$PACKAGE_NAME.egg-info
+      run: mkdir -p dist/lin dist/win dist/mac dist/lib dist/$PACKAGE_NAME.egg-info
 
 
     - name: Prepare Files               # Prepare files for the Python package
