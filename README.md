@@ -1,11 +1,14 @@
 # Nim4Python
 
 - [NimScript](https://nim-lang.github.io/Nim/nims.html) Interoperability for Python.
+  A programming language embedded inside a programming language. Pull Requests welcome.
+
+![](example.png)
 
 
 # Install
 
-- `pip install nim4py`
+- `pip install nim4py==0c42da8`
 
 
 # Use
@@ -14,11 +17,12 @@
 $ echo 'echo "NimScript embedded on Python"' > file.nims
 
 $ python
-Python 3.8.3 (default, May 17 2020, 18:15:42) [GCC 10.1.0] on linux
+Python 3.8.5 (default, May 17 2020, 18:15:42) [GCC 10.1.0] on linux
 >>> from nimscript4python import nimscript
->>> nimscript("file.nims", ["/home/juan/.choosenim/toolchains/nim-1.2.2/lib/"])
+>>> nimscript("file.nims", ["/home/juan/.choosenim/toolchains/nim-1.3.5/lib/"])
 NimScript embedded on Python
 
+>>>
 ```
 
 
@@ -27,7 +31,7 @@ NimScript embedded on Python
 
 # Requisites
 
-- [Nim](http://nim-lang.org),
+- [Nim](http://nim-lang.org) `1.3.5` or newer,
   [you can install it using choosenim_install](https://github.com/juancarlospaco/choosenim_install#choosenim-integration-for-python-pip).
 
 
@@ -51,12 +55,6 @@ Use full path to the `.nims` file, it wont expand stuff like `~`, etc.
 - Fails to find the stdlib folder ?.
 
 Use full path to the stdlib folder, it wont expand stuff like `~`, etc.
-
-- Why not PIP ?.
-
-Should be possible to install via Python PIP,
-but I dont know how to patch the file that needs to be patched from PIP,
-so for now it requires compiling with `nim` compiler. Pull Request welcome.
 
 - Whats NimScript ?.
 
