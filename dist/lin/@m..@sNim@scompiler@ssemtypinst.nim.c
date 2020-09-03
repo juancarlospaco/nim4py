@@ -1549,7 +1549,7 @@ NIM_BOOL* nimErr_;
 	{
 		NIM_BOOL T13_;
 		T13_ = (NIM_BOOL)0;
-		T13_ = ((521984 &(1U<<((NU)((*s).kind)&31U)))!=0);
+		T13_ = ((521984 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 		if (T13_) goto LA14_;
 		T13_ = !(((*s).magic == ((tyEnum_TMagic__shZhZOdbVC5nnFvcXQAImg) 0)));
 		LA14_: ;

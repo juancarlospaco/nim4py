@@ -1222,7 +1222,7 @@ NIM_BOOL* nimErr_;
 			while (1) {
 				if (!(i_2 <= ((NI) 20))) goto LA3;
 				{
-					if (!((value &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) (i_2)))&31U)))!=0)) goto LA6_;
+					if (!((value &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) (i_2)))&31U)))!=0)) goto LA6_;
 					v = ((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) (i_2));
 					value__RbCM2UXVLll9cN4eZagDG6A(this_0, v);
 					if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
@@ -1656,7 +1656,7 @@ appendString((*this_0).res, ((NimStringDesc*) &TM__uRgrUHgaDgkYkoMPsaodqw_6));
 	value__llsVIlOlOqDWZCDMxDvp3Q(this_0, ((NI64) ((*value).Sup.id)));
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	{
-		if (!((1572872 &(1U<<((NU)((*value).kind)&31U)))!=0)) goto LA20_;
+		if (!((1572872 &((NU32)1<<((NU)((*value).kind)&31U)))!=0)) goto LA20_;
 		key__phacdxUw7oWjcmjWuQy9bkg(this_0, ((NimStringDesc*) &TM__uRgrUHgaDgkYkoMPsaodqw_18));
 		if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 		value__llsVIlOlOqDWZCDMxDvp3Q(this_0, ((NI64) ((*value).position)));

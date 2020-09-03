@@ -351,7 +351,7 @@ static N_INLINE(NIM_BOOL, interestingVar__ISRlamvcJhcnDvn0K9aiZPQliftlocals)(tyO
 	NIM_BOOL T1_;
 	result = (NIM_BOOL)0;
 	T1_ = (NIM_BOOL)0;
-	T1_ = ((2100000 &(1U<<((NU)((*s).kind)&31U)))!=0);
+	T1_ = ((2100000 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 	if (!(T1_)) goto LA2_;
 	T1_ = !((((*s).flags &((NU64)1<<((NU)(((tyEnum_TSymFlag__K9ay6LWMat9bUiT9bIbMxpDHw) 3))&63U)))!=0));
 	LA2_: ;

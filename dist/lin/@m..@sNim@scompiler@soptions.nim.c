@@ -914,7 +914,7 @@ N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, hasWarn__6vRFaWMeJsly8QVCeazPQA)(tyObject_Conf
 	NIM_BOOL T1_;
 	result = (NIM_BOOL)0;
 	T1_ = (NIM_BOOL)0;
-	T1_ = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 13))&31U)))!=0);
+	T1_ = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 13))&31U)))!=0);
 	if (!(T1_)) goto LA2_;
 	T1_ = (((*conf).notes[(NU)((note- 12))>>3] &(1U<<((NU)((note- 12))&7U)))!=0);
 	LA2_: ;
@@ -925,7 +925,7 @@ N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, hasHint__6vRFaWMeJsly8QVCeazPQA_2)(tyObject_Co
 	NIM_BOOL result;
 	result = (NIM_BOOL)0;
 	{
-		if (!!((((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 14))&31U)))!=0))) goto LA3_;
+		if (!!((((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 14))&31U)))!=0))) goto LA3_;
 		result = NIM_FALSE;
 	}
 	goto LA1_;
@@ -1827,22 +1827,22 @@ break;
 		goto LA39_;
 		LA19_: ;
 		{
-			result = ((1643315184 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((1643315184 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA20_: ;
 		{
-			result = ((8388624 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((8388624 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA21_: ;
 		{
-			result = ((7680 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((7680 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA22_: ;
 		{
-			result = ((OS__Jx0qy9c9bSo4fGkMxUfUaAaw[((*conf).target.targetOS)- 1].Field12 &(1U<<((NU)(((tyEnum_TInfoOSProp__thetQwB9agpeQ13qFmAcWhg) 3))&7U)))!=0);
+			result = ((OS__Jx0qy9c9bSo4fGkMxUfUaAaw[((*conf).target.targetOS)- 1].Field12 &((NU8)1<<((NU)(((tyEnum_TInfoOSProp__thetQwB9agpeQ13qFmAcWhg) 3))&7U)))!=0);
 		}
 		goto LA39_;
 		LA23_: ;
@@ -1857,12 +1857,12 @@ break;
 		goto LA39_;
 		LA25_: ;
 		{
-			result = ((3670016 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((3670016 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA26_: ;
 		{
-			result = ((3145728 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((3145728 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA27_: ;
@@ -1882,7 +1882,7 @@ break;
 		goto LA39_;
 		LA30_: ;
 		{
-			result = ((1073741824 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((1073741824 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA31_: ;
@@ -1917,7 +1917,7 @@ break;
 		goto LA39_;
 		LA37_: ;
 		{
-			result = ((1056384 &(1U<<((NU)((*conf).target.targetOS)&31U)))!=0);
+			result = ((1056384 &((NU32)1<<((NU)((*conf).target.targetOS)&31U)))!=0);
 		}
 		goto LA39_;
 		LA38_: ;

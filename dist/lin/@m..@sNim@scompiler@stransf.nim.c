@@ -1025,7 +1025,7 @@ NIM_BOOL* nimErr_;
 		if (!T3_) goto LA5_;
 		{
 			tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw* T11_;
-			if (!((520192 &(1U<<((NU)((*s).kind)&31U)))!=0)) goto LA9_;
+			if (!((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0)) goto LA9_;
 			T11_ = (tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw*)0;
 			T11_ = transformBody__ocxOgPRHWfivNZELIhOv7w((*c).graph, s, NIM_TRUE);
 			if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
@@ -1060,7 +1060,7 @@ NIM_BOOL* nimErr_;
 		{
 			NIM_BOOL T24_;
 			T24_ = (NIM_BOOL)0;
-			T24_ = ((94208 &(1U<<((NU)((*s).kind)&31U)))!=0);
+			T24_ = ((94208 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 			if (!(T24_)) goto LA25_;
 			T24_ = !((*c).tooEarly);
 			LA25_: ;
@@ -1081,7 +1081,7 @@ NIM_BOOL* nimErr_;
 		T30_ = (NIM_BOOL)0;
 		T30_ = (((*s).flags &((NU64)1<<((NU)(((tyEnum_TSymFlag__K9ay6LWMat9bUiT9bIbMxpDHw) 30))&63U)))!=0);
 		if (!(T30_)) goto LA31_;
-		T30_ = ((520192 &(1U<<((NU)((*s).kind)&31U)))!=0);
+		T30_ = ((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 		LA31_: ;
 		if (!T30_) goto LA32_;
 		b = (*(*s).ast)._kind_6.sons->data[((NI) 6)];
@@ -3377,7 +3377,7 @@ NIM_BOOL* nimErr_;
 static N_INLINE(NIM_BOOL, importantComments__TzsgO9bY9cwAf4hwmbs7dTmgoptions)(tyObject_ConfigRefcolonObjectType___LaK09ayL9alwKUad7rts0rTw* conf) {
 	NIM_BOOL result;
 	result = (NIM_BOOL)0;
-	result = ((16640 &(1U<<((NU)((*conf).cmd)&31U)))!=0);
+	result = ((16640 &((NU32)1<<((NU)((*conf).cmd)&31U)))!=0);
 	return result;
 }
 N_LIB_PRIVATE N_NIMCALL(tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw*, transformVarSection__fVJbvRdbXsZk6wrZ9cHGJCg_2)(tyObject_TTransfContext__m7cKlfKYTeFRQpBypUYc2A* c, tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw* v) {
@@ -4316,7 +4316,7 @@ NIM_BOOL* nimErr_;
 		{
 			tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw* hoistedParams;
 			tyArray__AB6yfoUgfWM2NtGe9bzkCmw T39_;
-			if (!(((*call).flags &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 19))&31U)))!=0)) goto LA30_;
+			if (!(((*call).flags &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 19))&31U)))!=0)) goto LA30_;
 			hoistedParams = newNodeI__UY1ElYk2XqXDzuz9cGLG1Kw(((tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw) 100), (*call).info, ((NI) 0));
 			if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 			{
@@ -4554,7 +4554,7 @@ NIM_BOOL* nimErr_;
 {nimErr_ = nimErrorFlag();
 	result = (tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw*)0;
 	{
-		if (!(((*n).flags &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 5))&31U)))!=0)) goto LA3_;
+		if (!(((*n).flags &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 5))&31U)))!=0)) goto LA3_;
 		result = n;
 		goto BeforeRet_;
 	}
@@ -4734,9 +4734,9 @@ NIM_BOOL* nimErr_;
 	{
 		NIM_BOOL T6_;
 		T6_ = (NIM_BOOL)0;
-		T6_ = (((*(*(*prc).ast)._kind_6.sons->data[((NI) 6)]).flags &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 5))&31U)))!=0);
+		T6_ = (((*(*(*prc).ast)._kind_6.sons->data[((NI) 6)]).flags &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 5))&31U)))!=0);
 		if (T6_) goto LA7_;
-		T6_ = ((262144 &(1U<<((NU)((*prc).kind)&31U)))!=0);
+		T6_ = ((262144 &((NU32)1<<((NU)((*prc).kind)&31U)))!=0);
 		LA7_: ;
 		if (!T6_) goto LA8_;
 		result = (*(*prc).ast)._kind_6.sons->data[((NI) 6)];
@@ -4808,7 +4808,7 @@ NIM_BOOL* nimErr_;
 {nimErr_ = nimErrorFlag();
 	result = (tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw*)0;
 	{
-		if (!(((*n).flags &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 5))&31U)))!=0)) goto LA3_;
+		if (!(((*n).flags &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 5))&31U)))!=0)) goto LA3_;
 		result = n;
 	}
 	goto LA1_;

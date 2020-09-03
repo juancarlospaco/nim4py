@@ -960,7 +960,7 @@ NIM_BOOL* nimErr_;
 		T3_ = (NIM_BOOL)0;
 		T3_ = allUpper;
 		if (!(T3_)) goto LA4_;
-		T3_ = ((1049728 &(1U<<((NU)(k)&31U)))!=0);
+		T3_ = ((1049728 &((NU32)1<<((NU)(k)&31U)))!=0);
 		LA4_: ;
 		if (!T3_) goto LA5_;
 		result = copyString(s);
@@ -1092,7 +1092,7 @@ NIM_BOOL* nimErr_;
 	{
 		NIM_BOOL T3_;
 		T3_ = (NIM_BOOL)0;
-		T3_ = ((2080 &(1U<<((NU)(k)&31U)))!=0);
+		T3_ = ((2080 &((NU32)1<<((NU)(k)&31U)))!=0);
 		if (T3_) goto LA4_;
 		T3_ = !((((NU8)((*(*s).name).s->data[((NI) 0)])) >= ((NU8)(97)) && ((NU8)((*(*s).name).s->data[((NI) 0)])) <= ((NU8)(122)) || ((NU8)((*(*s).name).s->data[((NI) 0)])) >= ((NU8)(65)) && ((NU8)((*(*s).name).s->data[((NI) 0)])) <= ((NU8)(90)) || ((NU8)((*(*s).name).s->data[((NI) 0)])) >= ((NU8)(48)) && ((NU8)((*(*s).name).s->data[((NI) 0)])) <= ((NU8)(57)) || ((NU8)((*(*s).name).s->data[((NI) 0)])) >= ((NU8)(128)) && ((NU8)((*(*s).name).s->data[((NI) 0)])) <= ((NU8)(255)) || ((NU8)((*(*s).name).s->data[((NI) 0)])) == ((NU8)(95))));
 		LA4_: ;
@@ -1103,7 +1103,7 @@ NIM_BOOL* nimErr_;
 	{
 		NIM_BOOL T9_;
 		T9_ = (NIM_BOOL)0;
-		T9_ = ((144 &(1U<<((NU)(k)&31U)))!=0);
+		T9_ = ((144 &((NU32)1<<((NU)(k)&31U)))!=0);
 		if (!(T9_)) goto LA10_;
 		T9_ = (((*s).flags &((NU64)1<<((NU)(((tyEnum_TSymFlag__K9ay6LWMat9bUiT9bIbMxpDHw) 33))&63U)))!=0);
 		LA10_: ;
@@ -1128,7 +1128,7 @@ NIM_BOOL* nimErr_;
 	}
 	LA21_: ;
 	{
-		if (!!((((*s).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 10))&31U)))!=0))) goto LA25_;
+		if (!!((((*s).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 10))&31U)))!=0))) goto LA25_;
 		goto BeforeRet_;
 	}
 	LA25_: ;

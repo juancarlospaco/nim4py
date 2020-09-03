@@ -191,7 +191,7 @@ NIM_BOOL* nimErr_;
 				if (!(i <= ((NI) 9))) goto LA3;
 				{
 					NimStringDesc* T8_;
-					if (!((style &(1U<<((NU)((((tyEnum_Style__NXKayqTLMsAibFwNceBlpA) (i))- 1))&15U)))!=0)) goto LA6_;
+					if (!((style &((NU16)1<<((NU)((((tyEnum_Style__NXKayqTLMsAibFwNceBlpA) (i))- 1))&15U)))!=0)) goto LA6_;
 					s = ((tyEnum_Style__NXKayqTLMsAibFwNceBlpA) (i));
 					T8_ = (NimStringDesc*)0;
 					T8_ = ansiStyleCode__9cVIfUEE6Zf6B3dSUGw8cLQ(((NI) (s)));

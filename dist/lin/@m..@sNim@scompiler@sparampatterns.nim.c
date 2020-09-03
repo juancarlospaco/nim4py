@@ -403,7 +403,7 @@ NIM_BOOL* nimErr_;
 		goto LA14_;
 		LA23_: ;
 		{
-			if (!((kinds &(1U<<((NU)((*(*n)._kind_4.sym).kind)&31U)))!=0)) goto LA26_;
+			if (!((kinds &((NU32)1<<((NU)((*(*n)._kind_4.sym).kind)&31U)))!=0)) goto LA26_;
 			{
 				NIM_BOOL T30_;
 				NIM_BOOL T31_;
@@ -679,7 +679,7 @@ NIM_BOOL* nimErr_;
 static N_INLINE(NIM_BOOL, isRoutine__Ye2MiAptq3GrXxTQeyXNeAast)(tyObject_TSym__JpsEh5i1AcKChGYbg7aV4w* s) {
 	NIM_BOOL result;
 	result = (NIM_BOOL)0;
-	result = ((520192 &(1U<<((NU)((*s).kind)&31U)))!=0);
+	result = ((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 	return result;
 }
 static N_INLINE(NI, len__P89cqdlERShb9alU3iC0yj8wast)(tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw* n) {
@@ -942,7 +942,7 @@ NIM_BOOL* nimErr_;
 				T22_ = (tyEnum_TAssignableResult__JFgO3TudAWntzWI8Fmx4Ag)0;
 				T22_ = isAssignable__H8ClJSBthN45fIRKmjWHMQ(NIM_NIL, n, NIM_FALSE);
 				if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-				stack[(sp)- 0] = ((6 &(1U<<((NU)(T22_)&7U)))!=0);
+				stack[(sp)- 0] = ((6 &((NU8)1<<((NU)(T22_)&7U)))!=0);
 				sp += ((NI) 1);
 			}
 			break;
@@ -993,7 +993,7 @@ NIM_BOOL* nimErr_;
 	T1_ = (tyEnum_TAssignableResult__JFgO3TudAWntzWI8Fmx4Ag)0;
 	T1_ = isAssignable__H8ClJSBthN45fIRKmjWHMQ(NIM_NIL, n, NIM_FALSE);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-	result = ((38 &(1U<<((NU)(T1_)&7U)))!=0);
+	result = ((38 &((NU8)1<<((NU)(T1_)&7U)))!=0);
 	}BeforeRet_: ;
 	return result;
 }

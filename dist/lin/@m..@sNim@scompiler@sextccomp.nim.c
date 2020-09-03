@@ -1124,7 +1124,7 @@ appendString(T14_, ((NimStringDesc*) &TM__OyL9acDBDoBfMwa5zb1Y88w_81));
 	{
 		NimStringDesc* key_2;
 		NimStringDesc* T27_;
-		if (!(((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 15))&31U)))!=0)) goto LA25_;
+		if (!(((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 15))&31U)))!=0)) goto LA25_;
 		T27_ = (NimStringDesc*)0;
 		T27_ = rawNewString((nimname ? nimname->Sup.len : 0) + 6);
 appendString(T27_, nimname);
@@ -1160,7 +1160,7 @@ appendString(T27_, ((NimStringDesc*) &TM__OyL9acDBDoBfMwa5zb1Y88w_84));
 	{
 		NimStringDesc* key_3;
 		NimStringDesc* T39_;
-		if (!(((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 16))&31U)))!=0)) goto LA37_;
+		if (!(((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 16))&31U)))!=0)) goto LA37_;
 		T39_ = (NimStringDesc*)0;
 		T39_ = rawNewString((nimname ? nimname->Sup.len : 0) + 5);
 appendString(T39_, nimname);
@@ -1534,7 +1534,7 @@ appendString(T8_, options);
 		LA22_: ;
 		T20_ = T21_;
 		if (!(T20_)) goto LA25_;
-		T20_ = ((OS__Jx0qy9c9bSo4fGkMxUfUaAaw[((*conf).target.targetOS)- 1].Field12 &(1U<<((NU)(((tyEnum_TInfoOSProp__thetQwB9agpeQ13qFmAcWhg) 0))&7U)))!=0);
+		T20_ = ((OS__Jx0qy9c9bSo4fGkMxUfUaAaw[((*conf).target.targetOS)- 1].Field12 &((NU8)1<<((NU)(((tyEnum_TInfoOSProp__thetQwB9agpeQ13qFmAcWhg) 0))&7U)))!=0);
 		LA25_: ;
 		if (!T20_) goto LA26_;
 		T28_ = (NimStringDesc*)0;
@@ -1636,7 +1636,7 @@ appendString(includeCmd, T46_);
 		{
 			NIM_BOOL T60_;
 			T60_ = (NIM_BOOL)0;
-			T60_ = !((((*cfile).flags &(1U<<((NU)(((tyEnum_CfileFlag__Vl9c9ayddDuXiWtnWTsEYGsA) 1))&7U)))!=0));
+			T60_ = !((((*cfile).flags &((NU8)1<<((NU)(((tyEnum_CfileFlag__Vl9c9ayddDuXiWtnWTsEYGsA) 1))&7U)))!=0));
 			if (T60_) goto LA61_;
 			T60_ = noAbsolutePaths__wURcJahTBWvB1wOD7H1W2A_2extccomp(conf);
 			if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;

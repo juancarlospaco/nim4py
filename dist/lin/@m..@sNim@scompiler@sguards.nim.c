@@ -2920,7 +2920,7 @@ NIM_BOOL* nimErr_;
 	{
 		if (!((*n).kind == ((tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw) 3))) goto LA3_;
 		{
-			if (!((2097696 &(1U<<((NU)((*(*n)._kind_4.sym).kind)&31U)))!=0)) goto LA7_;
+			if (!((2097696 &((NU32)1<<((NU)((*(*n)._kind_4.sym).kind)&31U)))!=0)) goto LA7_;
 			result = NIM_TRUE;
 		}
 		goto LA5_;
@@ -2956,7 +2956,7 @@ N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, isVar__MH3XlBsw9ahhEwy5cK9cHBHA_4)(tyObject_TN
 	T2_ = (NIM_BOOL)0;
 	T2_ = ((*n).kind == ((tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw) 3));
 	if (!(T2_)) goto LA3_;
-	T2_ = ((2304 &(1U<<((NU)((*(*n)._kind_4.sym).kind)&31U)))!=0);
+	T2_ = ((2304 &((NU32)1<<((NU)((*(*n)._kind_4.sym).kind)&31U)))!=0);
 	LA3_: ;
 	T1_ = T2_;
 	if (!(T1_)) goto LA4_;

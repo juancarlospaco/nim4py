@@ -591,7 +591,7 @@ N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, isConstExpr__9cP6JNeOKqczaXCI4Zo4SBQ_2)(tyObje
 	T1_ = (NIM_BOOL)0;
 	T1_ = ((*n).kind >= ((tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw) 5) && (*n).kind <= ((tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw) 23));
 	if (T1_) goto LA2_;
-	T1_ = (((*n).flags &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 4))&31U)))!=0);
+	T1_ = (((*n).flags &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 4))&31U)))!=0);
 	LA2_: ;
 	result = T1_;
 	return result;

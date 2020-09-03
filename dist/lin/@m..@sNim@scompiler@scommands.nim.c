@@ -682,12 +682,12 @@ break;
 	goto LA42_;
 	LA7_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 13))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 13))&31U)))!=0);
 	}
 	goto LA42_;
 	LA8_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 14))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 14))&31U)))!=0);
 	}
 	goto LA42_;
 	LA9_: ;
@@ -697,17 +697,17 @@ break;
 	goto LA42_;
 	LA10_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 17))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 17))&31U)))!=0);
 	}
 	goto LA42_;
 	LA11_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 18))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 18))&31U)))!=0);
 	}
 	goto LA42_;
 	LA12_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 19))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 19))&31U)))!=0);
 	}
 	goto LA42_;
 	LA13_: ;
@@ -717,12 +717,12 @@ break;
 	goto LA42_;
 	LA14_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 21))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 21))&31U)))!=0);
 	}
 	goto LA42_;
 	LA15_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 24))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 24))&31U)))!=0);
 	}
 	goto LA42_;
 	LA16_: ;
@@ -737,12 +737,12 @@ break;
 	goto LA42_;
 	LA18_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 8))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 8))&31U)))!=0);
 	}
 	goto LA42_;
 	LA19_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 7))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 7))&31U)))!=0);
 	}
 	goto LA42_;
 	LA20_: ;
@@ -752,52 +752,52 @@ break;
 	goto LA42_;
 	LA21_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 1))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 1))&31U)))!=0);
 	}
 	goto LA42_;
 	LA22_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 2))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 2))&31U)))!=0);
 	}
 	goto LA42_;
 	LA23_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 3))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 3))&31U)))!=0);
 	}
 	goto LA42_;
 	LA24_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 4))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 4))&31U)))!=0);
 	}
 	goto LA42_;
 	LA25_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 6))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 6))&31U)))!=0);
 	}
 	goto LA42_;
 	LA26_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 5))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 5))&31U)))!=0);
 	}
 	goto LA42_;
 	LA27_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 9))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 9))&31U)))!=0);
 	}
 	goto LA42_;
 	LA28_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 10))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 10))&31U)))!=0);
 	}
 	goto LA42_;
 	LA29_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 12))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 12))&31U)))!=0);
 	}
 	goto LA42_;
 	LA30_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 11))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 11))&31U)))!=0);
 	}
 	goto LA42_;
 	LA31_: ;
@@ -832,12 +832,12 @@ break;
 	goto LA42_;
 	LA37_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 22))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 22))&31U)))!=0);
 	}
 	goto LA42_;
 	LA38_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 23))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 23))&31U)))!=0);
 	}
 	goto LA42_;
 	LA39_: ;
@@ -847,7 +847,7 @@ break;
 	goto LA42_;
 	LA40_: ;
 	{
-		result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 25))&31U)))!=0);
+		result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 25))&31U)))!=0);
 	}
 	goto LA42_;
 	LA41_: ;
@@ -998,12 +998,12 @@ break;
 		goto LA43_;
 		LA40_: ;
 		{
-			result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 15))&31U)))!=0);
+			result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 15))&31U)))!=0);
 		}
 		goto LA44_;
 		LA41_: ;
 		{
-			result = (((*conf).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 16))&31U)))!=0);
+			result = (((*conf).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 16))&31U)))!=0);
 		}
 		goto LA44_;
 		LA42_: ;

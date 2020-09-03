@@ -2785,7 +2785,7 @@ NIM_BOOL* nimErr_;
 			NIM_BOOL T29_;
 			T28_ = (NIM_BOOL)0;
 			T29_ = (NIM_BOOL)0;
-			T29_ = ((520192 &(1U<<((NU)((*sym).kind)&31U)))!=0);
+			T29_ = ((520192 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0);
 			if (!(T29_)) goto LA30_;
 			T29_ = !(((*sym).typ == NIM_NIL));
 			LA30_: ;
@@ -2885,7 +2885,7 @@ NIM_BOOL* nimErr_;
 							T23_ = (NIM_BOOL)0;
 							T23_ = (dest == NIM_NIL);
 							if (T23_) goto LA24_;
-							T23_ = ((520192 &(1U<<((NU)((*dest).kind)&31U)))!=0);
+							T23_ = ((520192 &((NU32)1<<((NU)((*dest).kind)&31U)))!=0);
 							LA24_: ;
 							if (!T23_) goto LA25_;
 							liMessage__Q6JNH4uRwLyZrj0dJakHew((*(*c).graph).config, (*n).info, ((tyEnum_TMsgKind__29cbg2fC1z5iM1PAI28kR5w) 51), ((NimStringDesc*) &TM__tPA3StZ6VsKyoznyrIfFxg_119), ((tyEnum_TErrorHandling__q4fXoCN3Xdcm6SS9cUkWkWw) 0), TM__tPA3StZ6VsKyoznyrIfFxg_120, NIM_FALSE);
@@ -2955,7 +2955,7 @@ NIM_BOOL* nimErr_;
 static N_INLINE(NIM_BOOL, isRoutine__Ye2MiAptq3GrXxTQeyXNeAast)(tyObject_TSym__JpsEh5i1AcKChGYbg7aV4w* s) {
 	NIM_BOOL result;
 	result = (NIM_BOOL)0;
-	result = ((520192 &(1U<<((NU)((*s).kind)&31U)))!=0);
+	result = ((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 	return result;
 }
 N_LIB_PRIVATE N_NIMCALL(void, processDefine__0LSWh2UqkqDBtNGS0Kh9cNQ_4)(tyObject_TContext__C9bB2okDBl3OKGUBiY5k5Ug* c, tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw* n) {
@@ -3842,7 +3842,7 @@ NIM_BOOL* nimErr_;
 		}
 	}
 	{
-		if (!!((((*(*c).optionStack->data[((NI) 0)]).options &(1U<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 17))&31U)))!=0))) goto LA21_;
+		if (!!((((*(*c).optionStack->data[((NI) 0)]).options &((NU32)1<<((NU)(((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 17))&31U)))!=0))) goto LA21_;
 		(*(*(*c).graph).config).options &= ~(((NU32)1) << ((((tyEnum_TOption__WspMeQySXNP2XoTWR5MTgg) 17)) & 31));
 	}
 	LA21_: ;
@@ -4627,7 +4627,7 @@ NIM_BOOL* nimErr_;
 			T18_ = (NIM_BOOL)0;
 			T18_ = (result == 0);
 			if (T18_) goto LA19_;
-			T18_ = !(((768 &(1U<<((NU)((*result).kind)&31U)))!=0));
+			T18_ = !(((768 &((NU32)1<<((NU)((*result).kind)&31U)))!=0));
 			LA19_: ;
 			T17_ = T18_;
 			if (T17_) goto LA20_;
@@ -4718,7 +4718,7 @@ NIM_BOOL* nimErr_;
 			tyObject_TIdent__GufRQq9c0miSybX3zBD4tyA* T18_;
 			T12_ = (NIM_BOOL)0;
 			T13_ = (NIM_BOOL)0;
-			T13_ = ((520192 &(1U<<((NU)((*o).kind)&31U)))!=0);
+			T13_ = ((520192 &((NU32)1<<((NU)((*o).kind)&31U)))!=0);
 			if (!(T13_)) goto LA14_;
 			T13_ = !(((*o).typ == NIM_NIL));
 			LA14_: ;
@@ -4984,7 +4984,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 					NIM_BOOL T76_;
 					NIM_BOOL T78_;
 					T76_ = (NIM_BOOL)0;
-					T76_ = ((520192 &(1U<<((NU)((*sym).kind)&31U)))!=0);
+					T76_ = ((520192 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0);
 					if (!(T76_)) goto LA77_;
 					T78_ = (NIM_BOOL)0;
 					T78_ = contains__wAzSnEu9cCHHjvPQlWBZUeQ(name_3, TM__tPA3StZ6VsKyoznyrIfFxg_91);
@@ -5096,7 +5096,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 						T109_ = (NIM_BOOL)0;
 						T109_ = (k == ((tyEnum_TSpecialWord__ycbpMCRV6Cd2eBh3X9biEiw) 102));
 						if (!(T109_)) goto LA110_;
-						T109_ = ((520192 &(1U<<((NU)((*sym).kind)&31U)))!=0);
+						T109_ = ((520192 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0);
 						LA110_: ;
 						if (!T109_) goto LA111_;
 						invalidPragma__0LSWh2UqkqDBtNGS0Kh9cNQ_2(c, it);
@@ -5319,7 +5319,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 					T167_ = (NIM_BOOL)0;
 					T167_ = !((sym == NIM_NIL));
 					if (!(T167_)) goto LA168_;
-					T167_ = ((521088 &(1U<<((NU)((*sym).kind)&31U)))!=0);
+					T167_ = ((521088 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0);
 					LA168_: ;
 					if (!T167_) goto LA169_;
 					{
@@ -5804,7 +5804,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 			case ((tyEnum_TSpecialWord__ycbpMCRV6Cd2eBh3X9biEiw) 129):
 			{
 				{
-					if (!((86016 &(1U<<((NU)((*sym).kind)&31U)))!=0)) goto LA321_;
+					if (!((86016 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0)) goto LA321_;
 					processOption__557NRVJHpXqxWeukDYchKw(c, it, (&(*sym).options));
 					if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 				}
@@ -6124,7 +6124,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 					T429_ = (NIM_BOOL)0;
 					T429_ = (sym == NIM_NIL);
 					if (T429_) goto LA430_;
-					T429_ = !(((525056 &(1U<<((NU)((*sym).kind)&31U)))!=0));
+					T429_ = !(((525056 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0));
 					LA430_: ;
 					if (!T429_) goto LA431_;
 					invalidPragma__0LSWh2UqkqDBtNGS0Kh9cNQ_2(c, it);
@@ -6149,7 +6149,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 					T438_ = (NIM_BOOL)0;
 					T438_ = (sym == NIM_NIL);
 					if (T438_) goto LA439_;
-					T438_ = !(((768 &(1U<<((NU)((*sym).kind)&31U)))!=0));
+					T438_ = !(((768 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0));
 					LA439_: ;
 					if (!T438_) goto LA440_;
 					invalidPragma__0LSWh2UqkqDBtNGS0Kh9cNQ_2(c, it);
@@ -6373,7 +6373,7 @@ appendString(T53_, reprEnum((NI)(*(*(*c).graph).config).backend, (&NTI__4OBsgZ9c
 				T506_ = (NIM_BOOL)0;
 				T506_ = (sym == NIM_NIL);
 				if (T506_) goto LA507_;
-				T506_ = ((619400 &(1U<<((NU)((*sym).kind)&31U)))!=0);
+				T506_ = ((619400 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0);
 				LA507_: ;
 				if (!T506_) goto LA508_;
 				T510_ = (tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw*)0;
@@ -6566,7 +6566,7 @@ NIM_BOOL* nimErr_;
 						{
 							NIM_BOOL T27_;
 							T27_ = (NIM_BOOL)0;
-							T27_ = ((520192 &(1U<<((NU)((*sym).kind)&31U)))!=0);
+							T27_ = ((520192 &((NU32)1<<((NU)((*sym).kind)&31U)))!=0);
 							if (!(T27_)) goto LA28_;
 							T27_ = !(((*sym).ast == NIM_NIL));
 							LA28_: ;
@@ -6584,7 +6584,7 @@ NIM_BOOL* nimErr_;
 		{
 			NIM_BOOL T33_;
 			T33_ = (NIM_BOOL)0;
-			T33_ = (((*sym).loc.flags &(1U<<((NU)(((tyEnum_TLocFlag__o2bqJgR4ceIupnUSpxiudA) 5))&15U)))!=0);
+			T33_ = (((*sym).loc.flags &((NU16)1<<((NU)(((tyEnum_TLocFlag__o2bqJgR4ceIupnUSpxiudA) 5))&15U)))!=0);
 			if (!(T33_)) goto LA34_;
 			T33_ = !((((*sym).flags &((NU64)1<<((NU)(((tyEnum_TSymFlag__K9ay6LWMat9bUiT9bIbMxpDHw) 7))&63U)))!=0));
 			LA34_: ;

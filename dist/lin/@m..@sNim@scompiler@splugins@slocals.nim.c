@@ -505,7 +505,7 @@ NIM_BOOL* nimErr_;
 								NIM_BOOL T14_;
 								tyObject_TType__v9ae2Dpu13OW2ZJ2U9bNMd9cQ* T16_;
 								T14_ = (NIM_BOOL)0;
-								T14_ = ((2099976 &(1U<<((NU)((*it).kind)&31U)))!=0);
+								T14_ = ((2099976 &((NU32)1<<((NU)((*it).kind)&31U)))!=0);
 								if (!(T14_)) goto LA15_;
 								T16_ = (tyObject_TType__v9ae2Dpu13OW2ZJ2U9bNMd9cQ*)0;
 								T16_ = skipTypes__zsqmUNR5OZrTUna0Y9bdu9bg((*it).typ, 8390656);

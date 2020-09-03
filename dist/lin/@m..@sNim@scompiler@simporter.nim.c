@@ -1364,7 +1364,7 @@ static N_INLINE(NIM_BOOL, isNil__Z9b9bYZSZQ2sJUqVv9aI24wbAintsets)(tyObject_IntS
 static N_INLINE(NIM_BOOL, isRoutine__Ye2MiAptq3GrXxTQeyXNeAast)(tyObject_TSym__JpsEh5i1AcKChGYbg7aV4w* s) {
 	NIM_BOOL result;
 	result = (NIM_BOOL)0;
-	result = ((520192 &(1U<<((NU)((*s).kind)&31U)))!=0);
+	result = ((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 	return result;
 }
 static N_INLINE(NIM_BOOL, hasPattern__Ye2MiAptq3GrXxTQeyXNeA_3ast)(tyObject_TSym__JpsEh5i1AcKChGYbg7aV4w* s) {
@@ -1400,9 +1400,9 @@ NIM_BOOL* nimErr_;
 		{
 			NIM_BOOL T9_;
 			T9_ = (NIM_BOOL)0;
-			T9_ = !(((520256 &(1U<<((NU)((*s).kind)&31U)))!=0));
+			T9_ = !(((520256 &((NU32)1<<((NU)((*s).kind)&31U)))!=0));
 			if (T9_) goto LA10_;
-			T9_ = !(((520256 &(1U<<((NU)((*check).kind)&31U)))!=0));
+			T9_ = !(((520256 &((NU32)1<<((NU)((*check).kind)&31U)))!=0));
 			LA10_: ;
 			if (!T9_) goto LA11_;
 			incl__jENnK9c9bPE73pKmo2vYjpqg((&(*c).ambiguousSymbols), (*s).Sup.id);
@@ -1532,7 +1532,7 @@ NIM_BOOL* nimErr_;
 					{
 						tyObject_TLineInfo__WGx4rAexNXnczy1Avn646Q T15_;
 						NimStringDesc* T16_;
-						if (!!(((43513728 &(1U<<((NU)((*s).kind)&31U)))!=0))) goto LA13_;
+						if (!!(((43513728 &((NU32)1<<((NU)((*s).kind)&31U)))!=0))) goto LA13_;
 						T15_ = (*s).info;
 						T16_ = (NimStringDesc*)0;
 						T16_ = rawNewString((reprEnum((NI)(*s).kind, (&NTI__cNCW9acsSznmEccl1fgQwkw_)) ? reprEnum((NI)(*s).kind, (&NTI__cNCW9acsSznmEccl1fgQwkw_))->Sup.len : 0) + ((*(*s).name).s ? (*(*s).name).s->Sup.len : 0) + 19);
@@ -1806,9 +1806,9 @@ NIM_BOOL* nimErr_;
 		NIM_BOOL T6_;
 		tyObject_ConfigRefcolonObjectType___LaK09ayL9alwKUad7rts0rTw* T23_;
 		T6_ = (NIM_BOOL)0;
-		T6_ = !(((43513728 &(1U<<((NU)((*s).kind)&31U)))!=0));
+		T6_ = !(((43513728 &((NU32)1<<((NU)((*s).kind)&31U)))!=0));
 		if (T6_) goto LA7_;
-		T6_ = ((520192 &(1U<<((NU)((*s).kind)&31U)))!=0);
+		T6_ = ((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 		LA7_: ;
 		multiImport = T6_;
 		{
@@ -1828,7 +1828,7 @@ NIM_BOOL* nimErr_;
 					}
 					LA16_: ;
 					{
-						if (!((43513728 &(1U<<((NU)((*s).kind)&31U)))!=0)) goto LA20_;
+						if (!((43513728 &((NU32)1<<((NU)((*s).kind)&31U)))!=0)) goto LA20_;
 						rawImportSymbol__C5U5ovqv9bQpgcHa6SJS9aMw(c, e, fromMod);
 						if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 					}

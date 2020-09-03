@@ -1109,7 +1109,7 @@ NIM_BOOL* nimErr_;
 	n_2 = skipHidden__BH9abOhPX8pH0DnEWlRxmlw_3(n);
 	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 	{
-		if (!(((*n_2).flags &(1U<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 6))&31U)))!=0)) goto LA3_;
+		if (!(((*n_2).flags &((NU32)1<<((NU)(((tyEnum_TNodeFlag__jyh9acXHkhZANSSvPIY7ZLg) 6))&31U)))!=0)) goto LA3_;
 		result = NIM_FALSE;
 	}
 	goto LA1_;

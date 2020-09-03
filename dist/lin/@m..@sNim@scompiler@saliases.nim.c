@@ -525,9 +525,9 @@ NIM_BOOL* nimErr_;
 			{
 				NIM_BOOL T11_;
 				T11_ = (NIM_BOOL)0;
-				T11_ = ((12576 &(1U<<((NU)((*(*a)._kind_4.sym).kind)&31U)))!=0);
+				T11_ = ((12576 &((NU32)1<<((NU)((*(*a)._kind_4.sym).kind)&31U)))!=0);
 				if (T11_) goto LA12_;
-				T11_ = ((12576 &(1U<<((NU)((*(*b)._kind_4.sym).kind)&31U)))!=0);
+				T11_ = ((12576 &((NU32)1<<((NU)((*(*b)._kind_4.sym).kind)&31U)))!=0);
 				LA12_: ;
 				if (!T11_) goto LA13_;
 				result = ((tyEnum_TAnalysisResult__p9a9bcrXoRmLT4eUuwrDq9b4w) 0);

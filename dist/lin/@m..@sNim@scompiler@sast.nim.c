@@ -1644,7 +1644,7 @@ NIM_BOOL* nimErr_;
 	genericAssign((void*)(&(*result).loc), (void*)(&(*s).loc), (&NTI__EtHNvCB0bgfu9bFjzx9cb6aA_));
 	(*result).annex = (*s).annex;
 	{
-		if (!((525056 &(1U<<((NU)((*result).kind)&31U)))!=0)) goto LA7_;
+		if (!((525056 &((NU32)1<<((NU)((*result).kind)&31U)))!=0)) goto LA7_;
 		(*result)._kind_4.guard = (*s)._kind_4.guard;
 		(*result)._kind_4.bitsize = (*s)._kind_4.bitsize;
 		(*result)._kind_4.alignment = (*s)._kind_4.alignment;
@@ -1867,7 +1867,7 @@ N_LIB_PRIVATE N_NIMCALL(tyObject_TSym__JpsEh5i1AcKChGYbg7aV4w*, skipGenericOwner
 	{
 		NIM_BOOL T3_;
 		T3_ = (NIM_BOOL)0;
-		T3_ = ((520192 &(1U<<((NU)((*s).kind)&31U)))!=0);
+		T3_ = ((520192 &((NU32)1<<((NU)((*s).kind)&31U)))!=0);
 		if (!(T3_)) goto LA4_;
 		T3_ = (((*s).flags &((NU64)1<<((NU)(((tyEnum_TSymFlag__K9ay6LWMat9bUiT9bIbMxpDHw) 2))&63U)))!=0);
 		LA4_: ;
