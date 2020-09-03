@@ -1,7 +1,7 @@
 # Nim4Python
 
-- [NimScript](https://nim-lang.github.io/Nim/nims.html) Interoperability for Python.
-  A programming language embedded inside a programming language. Pull Requests welcome.
+- [Nim](http://nim-lang.org) Interoperability for Python.
+  A programming language embedded inside a programming language, installable via PIP. Pull Requests welcome.
 
 ![](example.png)
 
@@ -32,7 +32,12 @@ NimScript embedded on Python
 # Requisites
 
 - [Nim](http://nim-lang.org) `1.3.5` or newer,
-  [you can install it using choosenim_install](https://github.com/juancarlospaco/choosenim_install#choosenim-integration-for-python-pip).
+  [you can install it using choosenim_install directly from PIP.](https://github.com/juancarlospaco/choosenim_install#choosenim-integration-for-python-pip)
+
+
+## TODO
+
+- Return back directly from Nim to Python.
 
 
 ## FAQ
