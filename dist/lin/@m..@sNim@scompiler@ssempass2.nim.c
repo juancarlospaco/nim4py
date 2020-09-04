@@ -1085,11 +1085,11 @@ N_LIB_PRIVATE N_NIMCALL(tyObject_TNode__bROa11lyF5vxEN9aYNbHmhw*, newNode__duw0U
 /* section: NIM_merge_DATA */
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_3, "/home/runner/work/nim4py/nim4py/Nim/compiler/sempass2.nim", 57);
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_2 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1098),
+((NI) 1099),
 ((NI) 16)}
 ;
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_4 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1104),
+((NI) 1105),
 ((NI) 15)}
 ;
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_5, "can raise an unlisted exception: ", 33);
@@ -1097,12 +1097,12 @@ STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_6, "Exception", 9);
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_7, "can have an unlisted effect: ", 29);
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_8, "base method is GC-safe, but \'$1\' is not", 39);
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_9 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1121),
+((NI) 1122),
 ((NI) 14)}
 ;
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_10, "base method has lock level $1, but dispatcher has $2", 52);
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_11 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1130),
+((NI) 1131),
 ((NI) 13)}
 ;
 extern TNimType NTI__ehmV9bTklH2Gt9cXHV9c0HLeQ_;
@@ -1235,7 +1235,7 @@ static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_62
 ;
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_63, "result", 6);
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_64 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1220),
+((NI) 1221),
 ((NI) 13)}
 ;
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_65, "routine has no return type, but .requires contains \'result\'", 59);
@@ -1266,16 +1266,16 @@ static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_74
 ;
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_75, "\'$1\' can have side effects", 26);
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_76 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1259),
+((NI) 1260),
 ((NI) 16)}
 ;
 STRING_LITERAL(TM__wkTG4eaV3t1uo3x09apjcwA_77, "declared lock level is $1, but real lock level is $2", 52);
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_78 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1268),
+((NI) 1269),
 ((NI) 11)}
 ;
 static NIM_CONST tyTuple__kN8up2W6YKc5YA9avn5mV5w TM__wkTG4eaV3t1uo3x09apjcwA_79 = {((NimStringDesc*) &TM__wkTG4eaV3t1uo3x09apjcwA_3),
-((NI) 1143),
+((NI) 1144),
 ((NI) 19)}
 ;
 static NIM_CONST tySet_tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw TM__wkTG4eaV3t1uo3x09apjcwA_80 = {
@@ -4060,6 +4060,8 @@ NIM_BOOL* nimErr_;
 					switch ((*(*op).sons->data[i_5]).kind) {
 					case ((tyEnum_TTypeKind__9a3YiReNVD0IJHWFKgXRe9ag) 46):
 					{
+						createTypeBoundOps__vMq8tMiEAonPcaM6b0S8dw(tracked, (*(*op).sons->data[i_5]).sons->data[((NI) 0)], (*n).info);
+						if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 						checkForSink__2juoX30KP12DlcWVrUGDWw((*tracked).config, (*tracked).owner, (*n)._kind_6.sons->data[i_5]);
 						if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 					}
@@ -6937,14 +6939,14 @@ NIM_BOOL* nimErr_;
 		if (!!(((*n).kind == ((tyEnum_TNodeKind__G4E4Gxe7oI2Cm03rkiOzQw) 1)))) goto LA9_;
 		{
 			NI T13_;
-			NimStringDesc* argX60gensym462_;
+			NimStringDesc* argX60gensym464_;
 			T13_ = (NI)0;
 			T13_ = len__P89cqdlERShb9alU3iC0yj8wast(effects);
 			if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 			if (!!((T13_ == ((NI) 0)))) goto LA14_;
-			argX60gensym462_ = toFileLineCol__fTQr4TRmeNwYlKvcPy3kYAmsgs(TM__wkTG4eaV3t1uo3x09apjcwA_79);
+			argX60gensym464_ = toFileLineCol__fTQr4TRmeNwYlKvcPy3kYAmsgs(TM__wkTG4eaV3t1uo3x09apjcwA_79);
 			if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
-			internalErrorImpl__PTSwZ6HM9bGBf7vF9cnDmwVw((*g).config, TM__wkTG4eaV3t1uo3x09apjcwA_25, argX60gensym462_, TM__wkTG4eaV3t1uo3x09apjcwA_79);
+			internalErrorImpl__PTSwZ6HM9bGBf7vF9cnDmwVw((*g).config, TM__wkTG4eaV3t1uo3x09apjcwA_25, argX60gensym464_, TM__wkTG4eaV3t1uo3x09apjcwA_79);
 			if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
 		}
 		LA14_: ;

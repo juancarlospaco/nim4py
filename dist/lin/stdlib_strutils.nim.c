@@ -115,7 +115,9 @@ struct tySequence__uB9b75OUPRENsBAu4AnoePA {
 };
 
 /* section: NIM_merge_PROC_HEADERS */
+N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, toHexImpl__izPdbsQUP8KddbeBZ2srrw)(NU64 x, NI len, NIM_BOOL handleNegative);
 N_NIMCALL(NimStringDesc*, mnewString)(NI len);
+static N_INLINE(NIM_BOOL*, nimErrorFlag)(void);
 N_NIMCALL(NimStringDesc*, rawNewString)(NI cap);
 N_LIB_PRIVATE N_NIMCALL(void, nsuAddf)(NimStringDesc** s, NimStringDesc* formatstr, NimStringDesc** a, NI aLen_0);
 N_LIB_PRIVATE N_NOINLINE(void, invalidFormatString__8vOMwvNB8blLQSoRXfInAg)(void);
@@ -130,7 +132,6 @@ N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, addChar)(NimStringDesc* s, NIM_CHAR c);
 N_LIB_PRIVATE N_NIMCALL(NI, findNormalized__7LxW6wQxHkQGOeaPw6nEjQ)(NimStringDesc* x, NimStringDesc** inArray, NI inArrayLen_0);
 N_LIB_PRIVATE N_NIMCALL(NI, nsuCmpIgnoreStyle)(NimStringDesc* a, NimStringDesc* b);
 N_LIB_PRIVATE N_NIMCALL(NIM_CHAR, nsuToLowerAsciiChar)(NIM_CHAR c);
-static N_INLINE(NIM_BOOL*, nimErrorFlag)(void);
 N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, substr__2yh9cer0ymNRHlOOg8P7IuA)(NimStringDesc* s, NI first, NI last);
 N_LIB_PRIVATE N_NIMCALL(void, failedAssertImpl__W9cjVocn1tjhW7p7xohJj6A)(NimStringDesc* msg);
 N_LIB_PRIVATE N_NIMCALL(NI, nsuFindStr)(NimStringDesc* s, NimStringDesc* sub, NI start, NI last);
@@ -164,7 +165,7 @@ STRING_LITERAL(TM__JGc9b9bh2D3nTdUR7TGyq8aA_2, "0123456789ABCDEF", 16);
 extern TNimType NTI__Ie1m0dv1ZHg72IgPRr1cDw_;
 extern TNimType NTI__yoNlBGx0D2tRizIdhQuENw_;
 STRING_LITERAL(TM__JGc9b9bh2D3nTdUR7TGyq8aA_3, "invalid format string", 21);
-STRING_LITERAL(TM__JGc9b9bh2D3nTdUR7TGyq8aA_4, "strutils.nim(2079, 12) `sub.len > 0` ", 37);
+STRING_LITERAL(TM__JGc9b9bh2D3nTdUR7TGyq8aA_4, "strutils.nim(2098, 12) `sub.len > 0` ", 37);
 STRING_LITERAL(TM__JGc9b9bh2D3nTdUR7TGyq8aA_5, "invalid float: ", 15);
 static NIM_CONST tySet_tyChar__nmiMWKVIe46vacnhAFrQvw TM__JGc9b9bh2D3nTdUR7TGyq8aA_6 = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -213,9 +214,9 @@ STRING_LITERAL(TM__JGc9b9bh2D3nTdUR7TGyq8aA_41, "prefermixed", 11);
 extern NIM_BOOL nimInErrorMode__759bT87luu8XGcbkw13FUjA;
 
 /* section: NIM_merge_PROCS */
-N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, nsuToHex)(NI64 x, NI len) {
+N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, toHexImpl__izPdbsQUP8KddbeBZ2srrw)(NU64 x, NI len, NIM_BOOL handleNegative) {
 	NimStringDesc* result;
-	NI64 n;
+	NU64 n;
 	result = (NimStringDesc*)0;
 	n = x;
 	result = mnewString(((NI) (len)));
@@ -231,23 +232,42 @@ N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, nsuToHex)(NI64 x, NI len) {
 			while (1) {
 				if (!(((NI) 0) <= res)) goto LA3;
 				j = res;
-				result->data[j] = ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_2)->data[(NI64)(n & IL64(15))];
-				n = (NI64)((NI64)(n) >> (NU64)(((NI) 4)));
+				result->data[j] = ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_2)->data[(NU64)(n & 15ULL)];
+				n = (NU64)((NU64)(n) >> (NU64)(((NI) 4)));
 				{
 					NIM_BOOL T6_;
 					T6_ = (NIM_BOOL)0;
-					T6_ = (n == IL64(0));
+					T6_ = (n == 0ULL);
 					if (!(T6_)) goto LA7_;
-					T6_ = (x < IL64(0));
+					T6_ = handleNegative;
 					LA7_: ;
 					if (!T6_) goto LA8_;
-					n = IL64(-1);
+					n = 18446744073709551615ULL;
 				}
 				LA8_: ;
 				res -= ((NI) 1);
 			} LA3: ;
 		}
 	}
+	return result;
+}
+static N_INLINE(NIM_BOOL*, nimErrorFlag)(void) {
+	NIM_BOOL* result;
+	result = (NIM_BOOL*)0;
+	result = (&nimInErrorMode__759bT87luu8XGcbkw13FUjA);
+	return result;
+}
+N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, nsuToHex)(NI64 x, NI len) {
+	NimStringDesc* result;
+	NU64 T1_;
+NIM_BOOL* nimErr_;
+{nimErr_ = nimErrorFlag();
+	result = (NimStringDesc*)0;
+	T1_ = (NU64)0;
+	T1_ = ((NU64) (x));
+	result = toHexImpl__izPdbsQUP8KddbeBZ2srrw(T1_, len, (x < IL64(0)));
+	if (NIM_UNLIKELY(*nimErr_)) goto BeforeRet_;
+	}BeforeRet_: ;
 	return result;
 }
 N_LIB_PRIVATE N_NOINLINE(void, invalidFormatString__8vOMwvNB8blLQSoRXfInAg)(void) {
@@ -258,7 +278,7 @@ N_LIB_PRIVATE N_NOINLINE(void, invalidFormatString__8vOMwvNB8blLQSoRXfInAg)(void
 	(*T1_).Sup.Sup.name = "ValueError";
 	(*T1_).Sup.Sup.message = copyString(((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_3));
 	(*T1_).Sup.Sup.parent = NIM_NIL;
-	raiseExceptionEx((Exception*)T1_, "ValueError", "invalidFormatString", "strutils.nim", 2716);
+	raiseExceptionEx((Exception*)T1_, "ValueError", "invalidFormatString", "strutils.nim", 2735);
 	goto BeforeRet_;
 	}BeforeRet_: ;
 }
@@ -297,12 +317,6 @@ N_LIB_PRIVATE N_NIMCALL(NIM_CHAR, nsuToLowerAsciiChar)(NIM_CHAR c) {
 		result = c;
 	}
 	LA1_: ;
-	return result;
-}
-static N_INLINE(NIM_BOOL*, nimErrorFlag)(void) {
-	NIM_BOOL* result;
-	result = (NIM_BOOL*)0;
-	result = (&nimInErrorMode__759bT87luu8XGcbkw13FUjA);
 	return result;
 }
 N_LIB_PRIVATE N_NIMCALL(NI, nsuCmpIgnoreStyle)(NimStringDesc* a, NimStringDesc* b) {
@@ -1071,7 +1085,7 @@ appendString(T8_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_5));
 appendString(T8_, s);
 		(*T7_).Sup.Sup.message = T8_;
 		(*T7_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T7_, "ValueError", "parseFloat", "strutils.nim", 1153);
+		raiseExceptionEx((Exception*)T7_, "ValueError", "parseFloat", "strutils.nim", 1172);
 		goto BeforeRet_;
 	}
 	LA5_: ;
@@ -1645,7 +1659,7 @@ appendString(T8_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_7));
 appendString(T8_, s);
 		(*T7_).Sup.Sup.message = T8_;
 		(*T7_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T7_, "ValueError", "parseInt", "strutils.nim", 1109);
+		raiseExceptionEx((Exception*)T7_, "ValueError", "parseInt", "strutils.nim", 1128);
 		goto BeforeRet_;
 	}
 	LA5_: ;
@@ -1749,7 +1763,7 @@ appendString(T10_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_18));
 appendString(T10_, s);
 		(*T9_).Sup.Sup.message = T10_;
 		(*T9_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T9_, "ValueError", "parseBool", "strutils.nim", 1259);
+		raiseExceptionEx((Exception*)T9_, "ValueError", "parseBool", "strutils.nim", 1278);
 		goto BeforeRet_;
 	}
 	LA5_: ;
@@ -1835,7 +1849,7 @@ appendString(T8_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_7));
 appendString(T8_, s);
 		(*T7_).Sup.Sup.message = T8_;
 		(*T7_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T7_, "ValueError", "parseBiggestInt", "strutils.nim", 1119);
+		raiseExceptionEx((Exception*)T7_, "ValueError", "parseBiggestInt", "strutils.nim", 1138);
 		goto BeforeRet_;
 	}
 	LA5_: ;
@@ -1934,7 +1948,7 @@ appendString(T8_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_19));
 appendString(T8_, s);
 		(*T7_).Sup.Sup.message = T8_;
 		(*T7_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T7_, "ValueError", "parseHexInt", "strutils.nim", 1196);
+		raiseExceptionEx((Exception*)T7_, "ValueError", "parseHexInt", "strutils.nim", 1215);
 		goto BeforeRet_;
 	}
 	LA5_: ;
@@ -2112,7 +2126,7 @@ appendString(T32_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_33));
 appendString(T32_, s);
 		(*T31_).Sup.Sup.message = T32_;
 		(*T31_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T31_, "ValueError", "parseEnum", "strutils.nim", 1310);
+		raiseExceptionEx((Exception*)T31_, "ValueError", "parseEnum", "strutils.nim", 1329);
 		goto BeforeRet_;
 	}
 	LA16_: ;
@@ -2206,7 +2220,7 @@ appendString(T22_, ((NimStringDesc*) &TM__JGc9b9bh2D3nTdUR7TGyq8aA_33));
 appendString(T22_, s);
 		(*T21_).Sup.Sup.message = T22_;
 		(*T21_).Sup.Sup.parent = NIM_NIL;
-		raiseExceptionEx((Exception*)T21_, "ValueError", "parseEnum", "strutils.nim", 1310);
+		raiseExceptionEx((Exception*)T21_, "ValueError", "parseEnum", "strutils.nim", 1329);
 		goto BeforeRet_;
 	}
 	LA11_: ;
