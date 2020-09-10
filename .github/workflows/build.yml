@@ -94,16 +94,16 @@ jobs:
         nimble -y install nimpy
 
 
-    - name: Nim Check
-      shell: bash
-      run: nim check --styleCheck:hint ${{ env.MAIN_MODULE }}
-
-
     - name: Patch stdlib                # Patch
       shell: bash
       run: |
         rm -f Nim/compiler/scriptconfig.nim
         cp -f patches/scriptconfig.nim Nim/compiler/scriptconfig.nim
+
+
+    - name: Nim Check
+      shell: bash
+      run: nim check --styleCheck:hint --path:$PWD/Nim ${{ env.MAIN_MODULE }}
 
 
     - name: Prepare Folders
@@ -124,21 +124,21 @@ jobs:
     - name: Generate Documentation (Linux)
       if: runner.os == 'Linux'
       run: |
-        nim doc --out:docs/index.html ${{ env.MAIN_MODULE }}
-        nim rst2tex --out:docs/${{ env.PACKAGE_NAME }}.tex ${{ env.MAIN_MODULE }}
+        nim doc --out:docs/index.html --path:$PWD/Nim ${{ env.MAIN_MODULE }}
+        nim rst2tex --path:$PWD/Nim --out:docs/${{ env.PACKAGE_NAME }}.tex ${{ env.MAIN_MODULE }}
 
 
     - name: Compile Debug & import (Unix)
       if: runner.os == 'Linux' || runner.os == 'macOS'
       run: |
-        nim c --app:lib --out:$PACKAGE_NAME.so $MAIN_MODULE
+        nim c --app:lib  --path:$PWD/Nim --out:$PACKAGE_NAME.so $MAIN_MODULE
         python3 -c "print(__import__('${{ env.PACKAGE_NAME }}').__file__)"
 
 
     - name: Compile Debug & import (Windows)
       if: runner.os == 'Windows'
       run: |
-        nim c --app:lib --out:${{ env.PACKAGE_NAME }}.pyd ${{ env.MAIN_MODULE }}
+        nim c --app:lib --path:$PWD/Nim --out:${{ env.PACKAGE_NAME }}.pyd ${{ env.MAIN_MODULE }}
         python.exe -c "print(__import__('${{ env.PACKAGE_NAME }}').__file__)"
 
 
@@ -147,7 +147,7 @@ jobs:
       shell: bash
       run: |
         rm -f dist/lin/*.c
-        nim ${{ env.NIM_COMMON_OPTIONS }} --nimcache:dist/lin --tlsEmulation:off ${{ env.MAIN_MODULE }}
+        nim ${{ env.NIM_COMMON_OPTIONS }} --path:$PWD/Nim --path:$PWD/Nim --nimcache:dist/lin --tlsEmulation:off ${{ env.MAIN_MODULE }}
 
 
     - name: Compile to C (Mac)
@@ -155,7 +155,7 @@ jobs:
       shell: bash
       run: |
         rm -f dist/mac/*.c
-        nim ${{ env.NIM_COMMON_OPTIONS }} --nimcache:dist/mac --tlsEmulation:off ${{ env.MAIN_MODULE }}
+        nim ${{ env.NIM_COMMON_OPTIONS }} --path:$PWD/Nim --nimcache:dist/mac --tlsEmulation:off ${{ env.MAIN_MODULE }}
 
 
     - name: Compile to C (Windows)
@@ -163,7 +163,7 @@ jobs:
       shell: bash
       run: |
         rm -f dist/win/*.c
-        nim ${{ env.NIM_COMMON_OPTIONS }} --nimcache:dist/win --tlsEmulation:on ${{ env.MAIN_MODULE }}
+        nim ${{ env.NIM_COMMON_OPTIONS }} --path:$PWD/Nim --nimcache:dist/win --tlsEmulation:on ${{ env.MAIN_MODULE }}
 
 
     - name: Clean out
